@@ -1,4 +1,4 @@
-import { AlertTriangle, Download, Chrome, Eye, Settings } from 'lucide-react';
+import { Shield, Download, Chrome, Eye, Settings, CheckCircle, Leaf, Users, Zap, Globe } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -8,138 +8,259 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-16">
-        <div className="text-center space-y-6 mb-16">
+        <div className="text-center space-y-8 mb-20">
           <div className="flex items-center justify-center space-x-3">
-            <AlertTriangle className="w-12 h-12 text-primary" />
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Brand Scanner
+            <Shield className="w-16 h-16 text-primary" />
+            <h1 className="text-6xl font-bold bg-gradient-to-r from-primary via-blue-600 to-green-600 bg-clip-text text-transparent">
+              Ethical Brand Scanner
             </h1>
           </div>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A Chrome extension that scans webpages for brand names and highlights them based on ethical categories like BDS, Environmental impact, Labor practices, and more.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            A powerful Chrome extension that helps you make ethical purchasing decisions by scanning webpages 
+            and highlighting brands based on their BDS status, environmental impact, and labor practices.
           </p>
-          <div className="flex items-center justify-center space-x-2">
-            <Badge variant="outline" className="bg-success text-success-foreground">Manifest V3</Badge>
-            <Badge variant="outline" className="bg-primary text-primary-foreground">React</Badge>
-            <Badge variant="outline" className="bg-accent text-accent-foreground">Local Data</Badge>
+          <div className="flex items-center justify-center space-x-3 flex-wrap gap-2">
+            <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200 text-sm px-3 py-1">
+              Free Forever
+            </Badge>
+            <Badge variant="outline" className="text-sm px-3 py-1">Manifest V3</Badge>
+            <Badge variant="outline" className="text-sm px-3 py-1">React + TypeScript</Badge>
+            <Badge variant="outline" className="text-sm px-3 py-1">Privacy First</Badge>
+          </div>
+          <div className="pt-4">
+            <Button size="lg" className="text-lg px-8 py-6">
+              <Download className="w-5 h-5 mr-2" />
+              Get Extension
+            </Button>
           </div>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <Eye className="w-5 h-5 text-primary" />
+        {/* Key Features */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+          <Card className="border-2 hover:border-primary/50 transition-colors">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center space-x-2 text-lg">
+                <Zap className="w-6 h-6 text-yellow-500" />
+                <span>Auto Scan</span>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <CardDescription className="text-sm">
+                Automatically scan pages when they load. Set it once and forget it.
+              </CardDescription>
+            </CardContent>
+          </Card>
+
+          <Card className="border-2 hover:border-primary/50 transition-colors">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center space-x-2 text-lg">
+                <Eye className="w-6 h-6 text-blue-500" />
                 <span>Smart Detection</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
-                Scans visible text on any webpage to detect brand names from a curated local database.
+              <CardDescription className="text-sm">
+                Detects brand variants and aliases for comprehensive coverage.
               </CardDescription>
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <Settings className="w-5 h-5 text-primary" />
-                <span>Category Filters</span>
+          <Card className="border-2 hover:border-primary/50 transition-colors">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center space-x-2 text-lg">
+                <Settings className="w-6 h-6 text-gray-500" />
+                <span>Customizable</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
-                Toggle highlighting for different categories: BDS, Environmental, Labor, Health, and Privacy concerns.
+              <CardDescription className="text-sm">
+                Choose which categories matter to you and toggle them on/off.
               </CardDescription>
             </CardContent>
           </Card>
 
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center space-x-2">
-                <Chrome className="w-5 h-5 text-primary" />
-                <span>Chrome Extension</span>
+          <Card className="border-2 hover:border-primary/50 transition-colors">
+            <CardHeader className="pb-3">
+              <CardTitle className="flex items-center space-x-2 text-lg">
+                <Globe className="w-6 h-6 text-green-500" />
+                <span>Privacy Focused</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <CardDescription>
-                Built with Manifest V3, React popup interface, and persistent user preferences via chrome.storage.
+              <CardDescription className="text-sm">
+                All data is stored locally. No tracking, no external servers.
               </CardDescription>
             </CardContent>
           </Card>
         </div>
 
+        {/* Categories Section */}
+        <div className="mb-20">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Ethical Categories</h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We track brands across three main ethical categories, each with detailed explanations
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Card className="border-2 border-red-200 bg-red-50/50">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-3 text-xl">
+                  <Shield className="w-7 h-7 text-red-600" />
+                  <span className="text-red-800">BDS</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm text-red-700 leading-relaxed">
+                  Companies that support or operate in occupied territories, violating international law. 
+                  Part of the Boycott, Divestment, Sanctions movement.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-green-200 bg-green-50/50">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-3 text-xl">
+                  <Leaf className="w-7 h-7 text-green-600" />
+                  <span className="text-green-800">Environmental</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm text-green-700 leading-relaxed">
+                  Companies with poor environmental practices, significant pollution records, 
+                  or climate change denial.
+                </CardDescription>
+              </CardContent>
+            </Card>
+
+            <Card className="border-2 border-blue-200 bg-blue-50/50">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-3 text-xl">
+                  <Users className="w-7 h-7 text-blue-600" />
+                  <span className="text-blue-800">Labor</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-sm text-blue-700 leading-relaxed">
+                  Companies with documented poor labor conditions, worker exploitation, 
+                  or union suppression practices.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* Installation Instructions */}
-        <Card className="max-w-4xl mx-auto">
-          <CardHeader>
-            <CardTitle className="flex items-center space-x-2">
-              <Download className="w-5 h-5 text-primary" />
-              <span>Installation Instructions</span>
+        <Card className="max-w-5xl mx-auto border-2">
+          <CardHeader className="text-center">
+            <CardTitle className="flex items-center justify-center space-x-3 text-2xl">
+              <Chrome className="w-8 h-8 text-primary" />
+              <span>Installation & Setup</span>
             </CardTitle>
-            <CardDescription>
-              How to install and use the Brand Scanner Chrome extension
+            <CardDescription className="text-lg">
+              Get started with the Ethical Brand Scanner in just a few steps
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-6">
+          <CardContent className="space-y-8">
+            <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold">Development Setup</h3>
-                <ol className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">1</span>
-                    <span>Build the extension: <code className="bg-muted px-2 py-1 rounded">npm run build:extension</code></span>
+                <h3 className="text-xl font-semibold flex items-center space-x-2">
+                  <Download className="w-5 h-5 text-primary" />
+                  <span>Development Setup</span>
+                </h3>
+                <ol className="space-y-3 text-sm">
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">1</span>
+                    <div>
+                      <p className="font-medium">Build the extension</p>
+                      <code className="bg-muted px-3 py-1 rounded text-xs block mt-1">npm run build:extension</code>
+                    </div>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">2</span>
-                    <span>Open Chrome and go to <code className="bg-muted px-2 py-1 rounded">chrome://extensions/</code></span>
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">2</span>
+                    <div>
+                      <p className="font-medium">Open Chrome extensions</p>
+                      <code className="bg-muted px-3 py-1 rounded text-xs block mt-1">chrome://extensions/</code>
+                    </div>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
-                    <span>Enable "Developer mode" in the top right</span>
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">3</span>
+                    <p>Enable "Developer mode" toggle in the top right</p>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-primary text-primary-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">4</span>
-                    <span>Click "Load unpacked" and select the <code className="bg-muted px-2 py-1 rounded">dist</code> folder</span>
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-primary text-primary-foreground rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">4</span>
+                    <div>
+                      <p className="font-medium">Load the extension</p>
+                      <p className="text-muted-foreground text-xs mt-1">Click "Load unpacked" and select the <code className="bg-muted px-1 rounded">dist</code> folder</p>
+                    </div>
                   </li>
                 </ol>
               </div>
               
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold">Usage</h3>
-                <ol className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-accent text-accent-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">1</span>
-                    <span>Navigate to any webpage</span>
+                <h3 className="text-xl font-semibold flex items-center space-x-2">
+                  <Eye className="w-5 h-5 text-green-600" />
+                  <span>Usage Guide</span>
+                </h3>
+                <ol className="space-y-3 text-sm">
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">1</span>
+                    <p>Navigate to any shopping or news website</p>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-accent text-accent-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">2</span>
-                    <span>Click the Brand Scanner extension icon</span>
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">2</span>
+                    <p>Click the Ethical Brand Scanner extension icon</p>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-accent text-accent-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">3</span>
-                    <span>Select categories to monitor</span>
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">3</span>
+                    <p>Toggle "Auto Scan" for automatic detection</p>
                   </li>
-                  <li className="flex items-start space-x-2">
-                    <span className="bg-accent text-accent-foreground rounded-full w-5 h-5 flex items-center justify-center text-xs">4</span>
-                    <span>Click "Start Scanning" to highlight brands</span>
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">4</span>
+                    <p>Select ethical categories that matter to you</p>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <span className="bg-green-600 text-white rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">5</span>
+                    <p>View flagged brands with detailed explanations</p>
                   </li>
                 </ol>
               </div>
             </div>
 
-            <div className="p-4 bg-muted rounded-lg">
-              <h4 className="font-medium mb-2">Categories Available:</h4>
-              <div className="flex flex-wrap gap-2">
-                <Badge className="bg-destructive text-destructive-foreground">BDS</Badge>
-                <Badge className="bg-success text-success-foreground">Environmental</Badge>
-                <Badge className="bg-warning text-warning-foreground">Labor</Badge>
-                <Badge className="bg-primary text-primary-foreground">Health</Badge>
-                <Badge className="bg-accent text-accent-foreground">Privacy</Badge>
+            <div className="p-6 bg-gradient-to-r from-blue-50 to-green-50 rounded-lg border">
+              <h4 className="font-semibold text-lg mb-3 flex items-center space-x-2">
+                <CheckCircle className="w-5 h-5 text-green-600" />
+                <span>What You'll See</span>
+              </h4>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="flex items-center space-x-2">
+                  <Badge className="bg-red-100 text-red-800 border-red-200">BDS</Badge>
+                  <span className="text-sm">Boycott flags</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Badge className="bg-green-100 text-green-800 border-green-200">Environmental</Badge>
+                  <span className="text-sm">Eco concerns</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <Badge className="bg-blue-100 text-blue-800 border-blue-200">Labor</Badge>
+                  <span className="text-sm">Worker issues</span>
+                </div>
               </div>
+              <p className="text-sm text-muted-foreground mt-3">
+                Brands are highlighted directly on the page with detailed tooltips explaining why they're flagged.
+              </p>
             </div>
           </CardContent>
         </Card>
+
+        {/* Footer */}
+        <div className="text-center mt-20 pt-8 border-t">
+          <p className="text-muted-foreground">
+            Built with React, TypeScript, and Tailwind CSS • 
+            <span className="text-green-600 font-medium"> Privacy-focused and completely free</span>
+          </p>
+        </div>
       </div>
     </div>
   );
