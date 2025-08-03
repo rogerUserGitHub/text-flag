@@ -4,7 +4,7 @@ import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { AlertTriangle, CheckCircle, Shield, Leaf, Users } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Shield, Leaf, Users, Scan, Zap, Eye, EyeOff } from 'lucide-react';
 
 // Brand interface matching the new data structure
 interface Brand {
@@ -167,11 +167,11 @@ const ExtensionPopup: React.FC = () => {
   // Get category color
   const getCategoryColor = (category: string): string => {
     const colors = {
-      BDS: 'bg-red-100 text-red-800 border-red-200',
-      Environmental: 'bg-green-100 text-green-800 border-green-200',
-      Labor: 'bg-blue-100 text-blue-800 border-blue-200'
+      BDS: 'bg-red-50 text-red-700 border-red-200 hover:bg-red-100',
+      Environmental: 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100',
+      Labor: 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100'
     };
-    return colors[category as keyof typeof colors] || 'bg-gray-100 text-gray-800 border-gray-200';
+    return colors[category as keyof typeof colors] || 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100';
   };
 
   // Get category icon
@@ -202,10 +202,13 @@ const ExtensionPopup: React.FC = () => {
 
   if (isLoading) {
     return (
-      <div className="w-80 h-96 flex items-center justify-center bg-background">
+      <div className="w-80 h-96 flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="text-center">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto mb-2"></div>
-          <p className="text-sm text-muted-foreground">Loading...</p>
+          <div className="relative">
+            <div className="animate-spin rounded-full h-12 w-12 border-4 border-slate-200 border-t-blue-600 mx-auto mb-4"></div>
+            <div className="absolute inset-0 animate-ping rounded-full h-12 w-12 border-2 border-blue-400 opacity-20"></div>
+          </div>
+          <p className="text-sm font-medium text-slate-600">Scanning page...</p>
         </div>
       </div>
     );
@@ -214,60 +217,103 @@ const ExtensionPopup: React.FC = () => {
   const visibleDetectedBrands = getDetectedBrandsForCategory();
 
   return (
-    <div className="w-80 h-96 bg-background border border-border overflow-hidden flex flex-col">
-      {/* Header */}
-      <div className="p-4 border-b border-border bg-card">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Shield className="w-5 h-5 text-primary" />
-            <h1 className="text-lg font-semibold text-card-foreground">Ethical Brand Scanner</h1>
+    <div className="w-80 h-96 bg-gradient-to-br from-slate-50 via-white to-slate-50 border border-slate-200/50 overflow-hidden flex flex-col shadow-xl">
+      {/* Header with gradient */}
+      <div className="relative p-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white">
+        <div className="absolute inset-0 bg-black/10"></div>
+        <div className="relative flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            {/* Logo space */}
+            <div className="w-8 h-8 bg-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center border border-white/30">
+              <Shield className="w-4 h-4 text-white" />
+            </div>
+            <div>
+              <h1 className="text-lg font-bold">Ethical Scanner</h1>
+              <p className="text-xs text-blue-100">Brand transparency tool</p>
+            </div>
           </div>
-          <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
+          <Badge variant="secondary" className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
             Free
           </Badge>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto">
+      <div className="flex-1 overflow-y-auto bg-white/50 backdrop-blur-sm">
         <div className="p-4 space-y-4">
-          {/* Controls */}
-          <Card>
-            <CardHeader className="pb-3">
-              <h3 className="font-medium text-card-foreground">Controls</h3>
-            </CardHeader>
-            <CardContent className="space-y-3">
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-card-foreground">Auto Scan</label>
-                <Switch checked={autoScanEnabled} onCheckedChange={toggleAutoScan} />
-              </div>
-              <div className="flex items-center justify-between">
-                <label className="text-sm font-medium text-card-foreground">Manual Scan</label>
-                <Button
-                  onClick={toggleHighlighting}
-                  variant={isHighlighting ? "destructive" : "default"}
-                  size="sm"
-                >
-                  {isHighlighting ? 'Stop Scan' : 'Start Scan'}
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
+          {/* Quick Actions */}
+          <div className="grid grid-cols-2 gap-3">
+            <Card className="border-0 shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all duration-200">
+              <CardContent className="p-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 bg-blue-100 rounded-md">
+                      <Zap className="w-4 h-4 text-blue-600" />
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium text-slate-700">Auto Scan</p>
+                      <p className="text-xs text-slate-500">Continuous</p>
+                    </div>
+                  </div>
+                  <Switch checked={autoScanEnabled} onCheckedChange={toggleAutoScan} />
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-sm bg-gradient-to-br from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 transition-all duration-200">
+              <CardContent className="p-3">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 bg-emerald-100 rounded-md">
+                      {isHighlighting ? (
+                        <EyeOff className="w-4 h-4 text-emerald-600" />
+                      ) : (
+                        <Eye className="w-4 h-4 text-emerald-600" />
+                      )}
+                    </div>
+                    <div>
+                      <p className="text-xs font-medium text-slate-700">Manual Scan</p>
+                      <p className="text-xs text-slate-500">On-demand</p>
+                    </div>
+                  </div>
+                  <Button
+                    onClick={toggleHighlighting}
+                    variant={isHighlighting ? "destructive" : "default"}
+                    size="sm"
+                    className="h-7 px-2 text-xs"
+                  >
+                    {isHighlighting ? 'Stop' : 'Start'}
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
 
           {/* Categories */}
-          <Card>
+          <Card className="border-0 shadow-sm bg-white/70 backdrop-blur-sm">
             <CardHeader className="pb-3">
-              <h3 className="font-medium text-card-foreground">Categories</h3>
+              <div className="flex items-center gap-2">
+                <div className="p-1.5 bg-slate-100 rounded-md">
+                  <Scan className="w-4 h-4 text-slate-600" />
+                </div>
+                <h3 className="font-semibold text-slate-800">Scan Categories</h3>
+              </div>
             </CardHeader>
             <CardContent className="space-y-3">
               {['BDS', 'Environmental', 'Labor'].map((category) => (
-                <div key={category} className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    {getCategoryIcon(category)}
-                    <label className="text-sm font-medium text-card-foreground">{category}</label>
-                    <Badge variant="outline" className="text-xs">
-                      {getBrandCountForCategory(category)}
-                    </Badge>
+                <div key={category} className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors">
+                  <div className="flex items-center gap-3">
+                    <div className="p-1.5 bg-slate-100 rounded-md">
+                      {getCategoryIcon(category)}
+                    </div>
+                    <div>
+                      <label className="text-sm font-medium text-slate-700">{category}</label>
+                      <div className="flex items-center gap-1 mt-0.5">
+                        <Badge variant="outline" className="text-xs bg-white/50">
+                          {getBrandCountForCategory(category)} brands
+                        </Badge>
+                      </div>
+                    </div>
                   </div>
                   <Switch
                     checked={enabledCategories.includes(category)}
@@ -279,48 +325,72 @@ const ExtensionPopup: React.FC = () => {
           </Card>
 
           {/* Detected Brands */}
-          <Card>
+          <Card className="border-0 shadow-sm bg-white/70 backdrop-blur-sm">
             <CardHeader className="pb-3">
-              <h3 className="font-medium text-card-foreground">Detected Brands</h3>
+              <div className="flex items-center gap-2">
+                <div className="p-1.5 bg-red-100 rounded-md">
+                  <AlertTriangle className="w-4 h-4 text-red-600" />
+                </div>
+                <h3 className="font-semibold text-slate-800">Detected Brands</h3>
+                {visibleDetectedBrands.length > 0 && (
+                  <Badge variant="destructive" className="ml-auto text-xs">
+                    {visibleDetectedBrands.length}
+                  </Badge>
+                )}
+              </div>
             </CardHeader>
             <CardContent>
               {visibleDetectedBrands.length === 0 ? (
-                <div className="text-center py-4">
-                  <CheckCircle className="w-8 h-8 text-green-500 mx-auto mb-2" />
-                  <p className="text-sm text-muted-foreground">No flagged brands on this page</p>
+                <div className="text-center py-6">
+                  <div className="relative mb-3">
+                    <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto" />
+                    <div className="absolute inset-0 animate-ping rounded-full bg-emerald-400 opacity-20"></div>
+                  </div>
+                  <p className="text-sm font-medium text-slate-700 mb-1">All clear!</p>
+                  <p className="text-xs text-slate-500">No flagged brands detected on this page</p>
                 </div>
               ) : (
                 <div className="space-y-2">
                   {visibleDetectedBrands.map((brand, index) => (
                     <div key={index} className="space-y-2">
                       <div
-                        className="flex items-center gap-2 p-2 rounded border border-border hover:bg-accent cursor-pointer"
+                        className="flex items-center gap-3 p-3 rounded-lg border border-red-200 bg-red-50/50 hover:bg-red-50 cursor-pointer transition-all duration-200 group"
                         onClick={() => setSelectedBrand(selectedBrand === brand.name ? null : brand.name)}
                       >
-                        <AlertTriangle className="w-4 h-4 text-destructive" />
-                        <span className="text-sm font-medium text-card-foreground flex-1">{brand.name}</span>
-                        <div className="flex gap-1">
-                          {brand.categories.map((cat) => (
-                            <Badge
-                              key={cat}
-                              variant="outline"
-                              className={`text-xs ${getCategoryColor(cat)}`}
-                            >
-                              {cat}
-                            </Badge>
-                          ))}
+                        <div className="p-1.5 bg-red-100 rounded-md group-hover:bg-red-200 transition-colors">
+                          <AlertTriangle className="w-4 h-4 text-red-600" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="text-sm font-semibold text-slate-800 truncate block">{brand.name}</span>
+                          <div className="flex gap-1 mt-1">
+                            {brand.categories.map((cat) => (
+                              <Badge
+                                key={cat}
+                                variant="outline"
+                                className={`text-xs ${getCategoryColor(cat)}`}
+                              >
+                                {cat}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                        <div className="text-xs text-slate-400 group-hover:text-slate-600 transition-colors">
+                          {selectedBrand === brand.name ? '−' : '+'}
                         </div>
                       </div>
                       
                       {selectedBrand === brand.name && brandData && (
-                        <div className="ml-6 p-3 bg-muted rounded border">
-                          <div className="space-y-2">
+                        <div className="ml-6 p-4 bg-slate-50/80 rounded-lg border border-slate-200">
+                          <div className="space-y-3">
                             {brand.categories.map((cat) => {
                               const categoryInfo = brandData.categories[cat];
                               return (
                                 <div key={cat} className="text-xs">
-                                  <span className="font-medium text-foreground">{categoryInfo.name}:</span>
-                                  <span className="text-muted-foreground ml-1">{categoryInfo.description}</span>
+                                  <div className="flex items-center gap-2 mb-1">
+                                    {getCategoryIcon(cat)}
+                                    <span className="font-semibold text-slate-800">{categoryInfo.name}</span>
+                                  </div>
+                                  <p className="text-slate-600 leading-relaxed ml-6">{categoryInfo.description}</p>
                                 </div>
                               );
                             })}
