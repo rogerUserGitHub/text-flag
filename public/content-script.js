@@ -1,16 +1,18 @@
-// Content script for Brand Scanner extension
+// Content script for Ethical Brand Scanner extension
 (function() {
-  let brandList = [];
+  let brandData = null;
   let enabledCategories = [];
+  let detectedBrands = [];
   let isHighlighting = false;
+  let autoScanEnabled = false;
 
-  // Load brand list from local file
-  async function loadBrandList() {
+  // Load brand data from JSON file
+  async function loadBrandData() {
     try {
       const response = await fetch(chrome.runtime.getURL('brandList.json'));
-      brandList = await response.json();
+      brandData = await response.json();
     } catch (error) {
-      console.error('Failed to load brand list:', error);
+      console.error('Failed to load brand data:', error);
     }
   }
 
@@ -18,10 +20,21 @@
   async function loadEnabledCategories() {
     try {
       const result = await chrome.storage.local.get(['enabledCategories']);
-      enabledCategories = result.enabledCategories || ['BDS', 'Environmental', 'Labor', 'Health', 'Privacy'];
+      enabledCategories = result.enabledCategories || ['BDS', 'Environmental', 'Labor'];
     } catch (error) {
       console.error('Failed to load enabled categories:', error);
-      enabledCategories = ['BDS', 'Environmental', 'Labor', 'Health', 'Privacy'];
+      enabledCategories = ['BDS', 'Environmental', 'Labor'];
+    }
+  }
+
+  // Load auto scan setting from storage
+  async function loadAutoScanSetting() {
+    try {
+      const result = await chrome.storage.local.get(['autoScanEnabled']);
+      autoScanEnabled = result.autoScanEnabled || false;
+    } catch (error) {
+      console.error('Failed to load auto scan setting:', error);
+      autoScanEnabled = false;
     }
   }
 
@@ -34,6 +47,7 @@
       parent.normalize();
     });
     isHighlighting = false;
+    detectedBrands = [];
   }
 
   // Get visible text elements
@@ -81,107 +95,134 @@
     return textNodes;
   }
 
-  // Highlight brands in text
+  // Function to highlight brands on the page
   function highlightBrands() {
     if (isHighlighting) {
       removeHighlights();
+      isHighlighting = false;
       return;
     }
 
+    if (!brandData || !brandData.brands || brandData.brands.length === 0) {
+      console.warn('Brand data not loaded');
+      return;
+    }
+
+    detectedBrands = [];
     const textNodes = getVisibleTextNodes(document.body);
-    const detectedBrands = new Set();
-
-    textNodes.forEach(textNode => {
-      let text = textNode.textContent;
-      let hasChanges = false;
-      let newHTML = '';
-      let lastIndex = 0;
-
-      // Create a regex for all brands with enabled categories
-      const relevantBrands = brandList.filter(brand => 
-        brand.categories.some(category => enabledCategories.includes(category))
-      );
-
-      if (relevantBrands.length === 0) return;
-
-      // Sort brands by length (longest first) to avoid partial matches
-      relevantBrands.sort((a, b) => b.name.length - a.name.length);
-
-      relevantBrands.forEach(brand => {
-        const regex = new RegExp(`\\b${brand.name.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\$&')}\\b`, 'gi');
-        let match;
-
-        while ((match = regex.exec(text)) !== null) {
-          // Check if this match overlaps with previous matches
-          if (match.index >= lastIndex) {
-            const enabledCategoriesForBrand = brand.categories.filter(cat => enabledCategories.includes(cat));
+    
+    textNodes.forEach(node => {
+      let text = node.textContent;
+      let hasMatch = false;
+      
+      brandData.brands.forEach(brand => {
+        // Check if brand has any enabled categories
+        const hasEnabledCategory = brand.categories.some(category => 
+          enabledCategories.includes(category)
+        );
+        
+        if (!hasEnabledCategory) return;
+        
+        // Check all variants of the brand name
+        brand.variants.forEach(variant => {
+          // Create case-insensitive regex for variant
+          const regex = new RegExp(`\\b${variant.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'gi');
+          
+          if (regex.test(text)) {
+            hasMatch = true;
             
-            if (enabledCategoriesForBrand.length > 0) {
-              detectedBrands.add(brand.name);
-              
-              // Add text before the match
-              newHTML += text.substring(lastIndex, match.index);
-              
-              // Add highlighted brand
-              const tooltip = `⚠️ Flagged for: ${enabledCategoriesForBrand.join(', ')}`;
-              newHTML += `<span class="brand-flagged" data-tooltip="${tooltip}">${match[0]}</span>`;
-              
-              lastIndex = match.index + match[0].length;
-              hasChanges = true;
+            // Add to detected brands if not already present
+            if (!detectedBrands.find(db => db.name === brand.name)) {
+              detectedBrands.push({
+                name: brand.name,
+                categories: brand.categories.filter(cat => enabledCategories.includes(cat))
+              });
             }
+            
+            // Replace matches with highlighted spans
+            text = text.replace(regex, (match) => {
+              const enabledCats = brand.categories.filter(cat => enabledCategories.includes(cat));
+              const categoryDescriptions = enabledCats.map(cat => {
+                const categoryInfo = brandData.categories[cat];
+                return `${categoryInfo.name} — ${categoryInfo.description}`;
+              });
+              const tooltip = `⚠️ Flagged: ${categoryDescriptions.join(' | ')}`;
+              return `<span class="brand-flagged" data-tooltip="${tooltip}">${match}</span>`;
+            });
           }
-        }
+        });
       });
-
-      if (hasChanges) {
-        // Add remaining text
-        newHTML += text.substring(lastIndex);
+      
+      if (hasMatch) {
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = text;
         
-        // Create a new element to replace the text node
-        const wrapper = document.createElement('span');
-        wrapper.innerHTML = newHTML;
-        
-        // Replace the text node with the wrapper's contents
-        const parent = textNode.parentNode;
+        // Replace the text node with the highlighted content
+        const parent = node.parentNode;
         while (wrapper.firstChild) {
-          parent.insertBefore(wrapper.firstChild, textNode);
+          parent.insertBefore(wrapper.firstChild, node);
         }
-        parent.removeChild(textNode);
+        parent.removeChild(node);
       }
     });
 
     isHighlighting = true;
-
+    
     // Send detected brands to popup
     chrome.runtime.sendMessage({
       type: 'brands_detected',
-      brands: Array.from(detectedBrands)
+      brands: detectedBrands
+    }).catch(() => {
+      // Popup might not be open, ignore error
     });
   }
 
+  // Initialize the extension
+  async function initialize() {
+    await loadBrandData();
+    await loadEnabledCategories();
+    await loadAutoScanSetting();
+    
+    // Auto scan if enabled
+    if (autoScanEnabled) {
+      // Wait a bit for the page to fully load
+      setTimeout(() => {
+        highlightBrands();
+      }, 1000);
+    }
+  }
+
+  initialize();
+
   // Listen for messages from popup
   chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-    if (message.type === 'toggle_highlighting') {
-      loadEnabledCategories().then(() => {
+    switch (message.type) {
+      case 'toggle_highlighting':
         highlightBrands();
         sendResponse({ success: true });
-      });
-    } else if (message.type === 'update_categories') {
-      enabledCategories = message.categories;
-      if (isHighlighting) {
-        removeHighlights();
-        highlightBrands();
-      }
-      sendResponse({ success: true });
-    } else if (message.type === 'get_detected_brands') {
-      // Return currently detected brands
-      const highlightedElements = document.querySelectorAll('.brand-flagged');
-      const detectedBrands = Array.from(new Set(Array.from(highlightedElements).map(el => el.textContent)));
-      sendResponse({ brands: detectedBrands });
+        break;
+        
+      case 'update_categories':
+        enabledCategories = message.categories;
+        if (isHighlighting) {
+          removeHighlights();
+          isHighlighting = false;
+          highlightBrands();
+        }
+        sendResponse({ success: true });
+        break;
+        
+      case 'update_auto_scan':
+        autoScanEnabled = message.enabled;
+        sendResponse({ success: true });
+        break;
+        
+      case 'get_detected_brands':
+        sendResponse({ brands: detectedBrands });
+        break;
+        
+      default:
+        sendResponse({ success: false, error: 'Unknown message type' });
     }
   });
-
-  // Initialize
-  loadBrandList();
-  loadEnabledCategories();
 })();

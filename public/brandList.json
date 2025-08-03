@@ -1,17 +1,78 @@
-[
-  { "name": "Nestlé", "categories": ["BDS", "Environmental"] },
-  { "name": "HP", "categories": ["BDS"] },
-  { "name": "Puma", "categories": ["BDS"] },
-  { "name": "Coca-Cola", "categories": ["Environmental"] },
-  { "name": "McDonald's", "categories": ["Environmental", "Health"] },
-  { "name": "Amazon", "categories": ["Labor", "Environmental"] },
-  { "name": "Apple", "categories": ["Labor"] },
-  { "name": "Nike", "categories": ["Labor", "BDS"] },
-  { "name": "Starbucks", "categories": ["BDS"] },
-  { "name": "Google", "categories": ["Privacy"] },
-  { "name": "Facebook", "categories": ["Privacy"] },
-  { "name": "Shell", "categories": ["Environmental"] },
-  { "name": "ExxonMobil", "categories": ["Environmental"] },
-  { "name": "Walmart", "categories": ["Labor"] },
-  { "name": "Johnson & Johnson", "categories": ["Health"] }
-]
+{
+  "categories": {
+    "BDS": {
+      "name": "BDS",
+      "description": "Companies that support or operate in occupied territories, violating international law"
+    },
+    "Environmental": {
+      "name": "Environmental",
+      "description": "Companies with poor environmental practices, pollution, or climate change denial"
+    },
+    "Labor": {
+      "name": "Labor",
+      "description": "Companies with poor labor conditions, worker exploitation, or union suppression"
+    }
+  },
+  "brands": [
+    {
+      "name": "Nestlé",
+      "variants": ["Nestlé", "Nestle", "NESTLE", "nestlé", "nestle"],
+      "categories": ["BDS", "Environmental"]
+    },
+    {
+      "name": "HP",
+      "variants": ["HP", "Hewlett-Packard", "Hewlett Packard", "hp"],
+      "categories": ["BDS"]
+    },
+    {
+      "name": "Puma",
+      "variants": ["Puma", "PUMA", "puma"],
+      "categories": ["BDS"]
+    },
+    {
+      "name": "Coca-Cola",
+      "variants": ["Coca-Cola", "Coca Cola", "Coke", "COCA-COLA", "coca-cola", "coke"],
+      "categories": ["Environmental"]
+    },
+    {
+      "name": "McDonald's",
+      "variants": ["McDonald's", "McDonalds", "MCDONALD'S", "mcdonald's", "McD", "mcd"],
+      "categories": ["Environmental", "Labor"]
+    },
+    {
+      "name": "Amazon",
+      "variants": ["Amazon", "AMAZON", "amazon", "Amazon.com"],
+      "categories": ["Labor", "Environmental"]
+    },
+    {
+      "name": "Apple",
+      "variants": ["Apple", "APPLE", "apple", "Apple Inc", "Apple Inc."],
+      "categories": ["Labor"]
+    },
+    {
+      "name": "Nike",
+      "variants": ["Nike", "NIKE", "nike"],
+      "categories": ["Labor", "BDS"]
+    },
+    {
+      "name": "Starbucks",
+      "variants": ["Starbucks", "STARBUCKS", "starbucks"],
+      "categories": ["BDS"]
+    },
+    {
+      "name": "Shell",
+      "variants": ["Shell", "SHELL", "shell", "Royal Dutch Shell"],
+      "categories": ["Environmental"]
+    },
+    {
+      "name": "ExxonMobil",
+      "variants": ["ExxonMobil", "Exxon Mobil", "Exxon", "EXXONMOBIL", "exxonmobil"],
+      "categories": ["Environmental"]
+    },
+    {
+      "name": "Walmart",
+      "variants": ["Walmart", "Wal-Mart", "WALMART", "walmart", "wal-mart"],
+      "categories": ["Labor"]
+    }
+  ]
+}
