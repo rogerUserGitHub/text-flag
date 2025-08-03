@@ -1,7 +1,9 @@
-import { build } from 'vite';
 import fs from 'fs-extra';
 import path from 'path';
 import { fileURLToPath } from 'url';
+
+// Dynamic import for Vite to handle devDependency
+const { build } = await import('vite');
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
