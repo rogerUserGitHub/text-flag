@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Brand Scanner",
+  "version": "1.0.0",
+  "description": "Scan webpages for brand names and highlight them based on categories",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Brand Scanner"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"],
+      "css": ["content-styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["brandList.json"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

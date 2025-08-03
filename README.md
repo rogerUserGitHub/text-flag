@@ -1,73 +1,122 @@
-# Welcome to your Lovable project
+# Brand Scanner Chrome Extension
 
-## Project info
+A Chrome extension built with React and Manifest V3 that scans webpages for brand names and highlights them based on ethical categories.
 
-**URL**: https://lovable.dev/projects/b5b47a7c-1f12-43ec-ae35-a9e2118f06c6
+## Features
 
-## How can I edit this code?
+- 🔍 **Smart Detection**: Scans visible text on any webpage to detect brand names
+- 🏷️ **Category Filters**: Toggle highlighting for different categories (BDS, Environmental, Labor, Health, Privacy)
+- ⚡ **React Popup**: Beautiful, responsive popup interface built with React and Tailwind CSS
+- 💾 **Persistent Settings**: User preferences saved via chrome.storage.local
+- 🚀 **Manifest V3**: Built with the latest Chrome extension standards
+- 📱 **Local Data**: No API calls - all brand data stored locally
 
-There are several ways of editing your application.
+## Installation
 
-**Use Lovable**
+### Development Setup
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b5b47a7c-1f12-43ec-ae35-a9e2118f06c6) and start prompting.
+1. Clone this repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-Changes made via Lovable will be committed automatically to this repo.
+3. Build the extension:
+   ```bash
+   npm run build:extension
+   ```
 
-**Use your preferred IDE**
+4. Load the extension in Chrome:
+   - Open Chrome and go to `chrome://extensions/`
+   - Enable "Developer mode" in the top right
+   - Click "Load unpacked" and select the `dist` folder
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### Usage
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+1. Navigate to any webpage
+2. Click the Brand Scanner extension icon in your toolbar
+3. Select which categories you want to monitor
+4. Click "Start Scanning" to highlight brands on the page
+5. Hover over highlighted brands to see why they're flagged
 
-Follow these steps:
+## Brand Categories
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+- **BDS**: Brands associated with BDS (Boycott, Divestment, Sanctions) campaigns
+- **Environmental**: Companies with environmental concerns
+- **Labor**: Brands with labor practice issues
+- **Health**: Companies with health-related controversies
+- **Privacy**: Tech companies with privacy concerns
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Technical Details
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Framework**: React 18 with TypeScript
+- **Styling**: Tailwind CSS with custom design system
+- **UI Components**: shadcn/ui components
+- **Extension**: Manifest V3 Chrome Extension
+- **Storage**: chrome.storage.local for user preferences
+- **Build**: Vite for bundling
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+## Project Structure
+
+```
+├── public/
+│   ├── manifest.json          # Chrome extension manifest
+│   ├── popup.html            # Extension popup HTML
+│   ├── brandList.json        # Local brand database
+│   ├── content-script.js     # Content script for page scanning
+│   └── content-styles.css    # Styles for highlighted brands
+├── src/
+│   ├── components/
+│   │   └── ExtensionPopup.tsx # Main popup React component
+│   ├── popup.tsx             # Popup entry point
+│   └── pages/Index.tsx       # Landing page with instructions
+└── scripts/
+    └── build-extension.js    # Extension build script
 ```
 
-**Edit a file directly in GitHub**
+## Development
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To work on this project:
 
-**Use GitHub Codespaces**
+1. Run the development server for the landing page:
+   ```bash
+   npm run dev
+   ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+2. For extension development, build and reload:
+   ```bash
+   npm run build:extension
+   ```
 
-## What technologies are used for this project?
+3. Reload the extension in Chrome after making changes
 
-This project is built with:
+## Brand Database
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The extension uses a local JSON file (`public/brandList.json`) containing brand information:
 
-## How can I deploy this project?
+```json
+[
+  { 
+    "name": "Nestlé", 
+    "categories": ["BDS", "Environmental"] 
+  },
+  { 
+    "name": "Amazon", 
+    "categories": ["Labor", "Environmental"] 
+  }
+]
+```
 
-Simply open [Lovable](https://lovable.dev/projects/b5b47a7c-1f12-43ec-ae35-a9e2118f06c6) and click on Share -> Publish.
+To add new brands, simply edit this file and rebuild the extension.
 
-## Can I connect a custom domain to my Lovable project?
+## Contributing
 
-Yes, you can!
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test the extension thoroughly
+5. Submit a pull request
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+MIT License - see LICENSE file for details.

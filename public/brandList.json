@@ -1,0 +1,17 @@
+[
+  { "name": "Nestlé", "categories": ["BDS", "Environmental"] },
+  { "name": "HP", "categories": ["BDS"] },
+  { "name": "Puma", "categories": ["BDS"] },
+  { "name": "Coca-Cola", "categories": ["Environmental"] },
+  { "name": "McDonald's", "categories": ["Environmental", "Health"] },
+  { "name": "Amazon", "categories": ["Labor", "Environmental"] },
+  { "name": "Apple", "categories": ["Labor"] },
+  { "name": "Nike", "categories": ["Labor", "BDS"] },
+  { "name": "Starbucks", "categories": ["BDS"] },
+  { "name": "Google", "categories": ["Privacy"] },
+  { "name": "Facebook", "categories": ["Privacy"] },
+  { "name": "Shell", "categories": ["Environmental"] },
+  { "name": "ExxonMobil", "categories": ["Environmental"] },
+  { "name": "Walmart", "categories": ["Labor"] },
+  { "name": "Johnson & Johnson", "categories": ["Health"] }
+]
