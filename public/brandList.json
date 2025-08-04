@@ -17,62 +17,194 @@
     {
       "name": "Nestlé",
       "variants": ["Nestlé", "Nestle", "NESTLE", "nestlé", "nestle"],
-      "categories": ["BDS", "Environmental"]
+      "categories": ["BDS", "Environmental"],
+      "placeholder": "Major water privatization and BDS violations in occupied territories",
+      "links": [
+        {
+          "text": "Water privatization",
+          "url": "https://www.theguardian.com/global-development/2021/jul/28/nestle-water-privatization-bottled-water-business"
+        },
+        {
+          "text": "BDS violations",
+          "url": "https://bdsmovement.net/news/nestle-continues-operate-illegal-settlements"
+        },
+        {
+          "text": "Water privatization",
+          "url": "https://www.theguardian.com/global-development/2021/jul/28/nestle-water-privatization-bottled-water-business"
+        },
+        {
+          "text": "BDS violations",
+          "url": "https://bdsmovement.net/news/nestle-continues-operate-illegal-settlements"
+        }
+      ]
     },
     {
       "name": "HP",
       "variants": ["HP", "Hewlett-Packard", "Hewlett Packard", "hp"],
-      "categories": ["BDS"]
+      "categories": ["BDS"],
+      "placeholder": "Technology infrastructure supporting Israeli occupation",
+      "links": [
+        {
+          "text": "BDS campaign",
+          "url": "https://bdsmovement.net/campaigns/hp"
+        },
+        {
+          "text": "Occupation technology",
+          "url": "https://www.who-profits.org/company/hewlett-packard-enterprise"
+        }
+      ]
     },
     {
       "name": "Puma",
       "variants": ["Puma", "PUMA", "puma"],
-      "categories": ["BDS"]
+      "categories": ["BDS"],
+      "placeholder": "Sponsoring Israeli football teams in occupied territories",
+      "links": [
+        {
+          "text": "Football sponsorship",
+          "url": "https://bdsmovement.net/news/puma-sponsors-israeli-football-teams"
+        }
+      ]
     },
     {
       "name": "Coca-Cola",
       "variants": ["Coca-Cola", "Coca Cola", "Coke", "COCA-COLA", "coca-cola", "coke"],
-      "categories": ["Environmental"]
+      "categories": ["Environmental"],
+      "placeholder": "Major plastic pollution and water depletion",
+      "links": [
+        {
+          "text": "Plastic pollution",
+          "url": "https://www.breakfreefromplastic.org/globalbrandauditreport2021/"
+        },
+        {
+          "text": "Water depletion",
+          "url": "https://www.theguardian.com/environment/2020/dec/17/coca-cola-named-worlds-biggest-plastic-polluter"
+        }
+      ]
     },
     {
       "name": "McDonald's",
       "variants": ["McDonald's", "McDonalds", "MCDONALD'S", "mcdonald's", "McD", "mcd"],
-      "categories": ["Environmental", "Labor"]
+      "categories": ["Environmental", "Labor"],
+      "placeholder": "Deforestation for beef and poor worker conditions",
+      "links": [
+        {
+          "text": "Deforestation",
+          "url": "https://www.mightyearth.org/mcdonalds-deforestation/"
+        },
+        {
+          "text": "Worker conditions",
+          "url": "https://www.fightfor15.org/mcdonalds-workers/"
+        }
+      ]
     },
     {
       "name": "Amazon",
       "variants": ["Amazon", "AMAZON", "amazon", "Amazon.com"],
-      "categories": ["Labor", "Environmental"]
+      "categories": ["Labor", "Environmental"],
+      "placeholder": "Worker exploitation and massive carbon footprint",
+      "links": [
+        {
+          "text": "Worker conditions",
+          "url": "https://www.theguardian.com/technology/2021/apr/28/amazon-workers-union-organizing"
+        },
+        {
+          "text": "Environmental impact",
+          "url": "https://www.theverge.com/2021/7/14/22577823/amazon-carbon-footprint-climate-change"
+        }
+      ]
     },
     {
       "name": "Apple",
       "variants": ["Apple", "APPLE", "apple", "Apple Inc", "Apple Inc."],
-      "categories": ["Labor"]
+      "categories": ["Labor"],
+      "placeholder": "Foxconn labor violations and supply chain exploitation",
+      "links": [
+        {
+          "text": "Foxconn violations",
+          "url": "https://www.theguardian.com/technology/2021/sep/08/apple-foxconn-factory-workers-rights"
+        },
+        {
+          "text": "Supply chain",
+          "url": "https://www.amnesty.org/en/latest/news/2016/03/apple-and-samsung-failing-to-tackle-child-labour-allegations/"
+        }
+      ]
     },
     {
       "name": "Nike",
       "variants": ["Nike", "NIKE", "nike"],
-      "categories": ["Labor", "BDS"]
+      "categories": ["Labor", "BDS"],
+      "placeholder": "Sweatshop labor and BDS violations",
+      "links": [
+        {
+          "text": "Sweatshop labor",
+          "url": "https://www.cleanclothes.org/campaigns/nike"
+        },
+        {
+          "text": "BDS violations",
+          "url": "https://bdsmovement.net/news/nike-sponsors-israeli-sports"
+        }
+      ]
     },
     {
       "name": "Starbucks",
       "variants": ["Starbucks", "STARBUCKS", "starbucks"],
-      "categories": ["BDS"]
+      "categories": ["BDS"],
+      "placeholder": "Operating in illegal settlements",
+      "links": [
+        {
+          "text": "Settlement operations",
+          "url": "https://bdsmovement.net/news/starbucks-operates-illegal-settlements"
+        }
+      ]
     },
     {
       "name": "Shell",
       "variants": ["Shell", "SHELL", "shell", "Royal Dutch Shell"],
-      "categories": ["Environmental"]
+      "categories": ["Environmental"],
+      "placeholder": "Major climate change contributor and oil spills",
+      "links": [
+        {
+          "text": "Climate impact",
+          "url": "https://www.theguardian.com/environment/2021/may/26/shell-climate-change-court-ruling"
+        },
+        {
+          "text": "Oil spills",
+          "url": "https://www.nigerianenvironmental.org/shell-oil-spills/"
+        }
+      ]
     },
     {
       "name": "ExxonMobil",
       "variants": ["ExxonMobil", "Exxon Mobil", "Exxon", "EXXONMOBIL", "exxonmobil"],
-      "categories": ["Environmental"]
+      "categories": ["Environmental"],
+      "placeholder": "Climate change denial and environmental destruction",
+      "links": [
+        {
+          "text": "Climate denial",
+          "url": "https://www.scientificamerican.com/article/exxon-knew-about-climate-change-almost-40-years-ago/"
+        },
+        {
+          "text": "Environmental damage",
+          "url": "https://www.nrdc.org/stories/exxon-valdez-oil-spill-facts"
+        }
+      ]
     },
     {
       "name": "Walmart",
       "variants": ["Walmart", "Wal-Mart", "WALMART", "walmart", "wal-mart"],
-      "categories": ["Labor"]
+      "categories": ["Labor"],
+      "placeholder": "Anti-union practices and low wages",
+      "links": [
+        {
+          "text": "Anti-union",
+          "url": "https://www.ufcw.org/walmart-workers-rights/"
+        },
+        {
+          "text": "Low wages",
+          "url": "https://www.epi.org/publication/walmart-low-wages-higher-taxes/"
+        }
+      ]
     }
   ]
 }

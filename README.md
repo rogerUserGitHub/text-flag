@@ -1,15 +1,16 @@
-# Brand Scanner Chrome Extension
+# ClearLabel - Ethical Brand Scanner
 
-A Chrome extension built with React and Manifest V3 that scans webpages for brand names and highlights them based on ethical categories.
+A Chrome extension that helps users make informed decisions by identifying and flagging brands with ethical concerns. Built with React and Manifest V3, it scans webpages for brand names and highlights them based on various ethical categories.
 
 ## Features
 
 - 🔍 **Smart Detection**: Scans visible text on any webpage to detect brand names
-- 🏷️ **Category Filters**: Toggle highlighting for different categories (BDS, Environmental, Labor, Health, Privacy)
+- 🏷️ **Category Filters**: Toggle highlighting for different categories (BDS, Environmental, Labor)
 - ⚡ **React Popup**: Beautiful, responsive popup interface built with React and Tailwind CSS
 - 💾 **Persistent Settings**: User preferences saved via chrome.storage.local
 - 🚀 **Manifest V3**: Built with the latest Chrome extension standards
 - 📱 **Local Data**: No API calls - all brand data stored locally
+- 🔗 **Detailed Information**: Provides links to sources and detailed explanations for each flagged brand
 
 ## Installation
 
@@ -41,11 +42,9 @@ A Chrome extension built with React and Manifest V3 that scans webpages for bran
 
 ## Brand Categories
 
-- **BDS**: Brands associated with BDS (Boycott, Divestment, Sanctions) campaigns
-- **Environmental**: Companies with environmental concerns
-- **Labor**: Brands with labor practice issues
-- **Health**: Companies with health-related controversies
-- **Privacy**: Tech companies with privacy concerns
+- **BDS**: Brands associated with BDS (Boycott, Divestment, Sanctions) campaigns and violations in occupied territories
+- **Environmental**: Companies with poor environmental practices, pollution, or climate change denial
+- **Labor**: Brands with poor labor conditions, worker exploitation, or union suppression
 
 ## Technical Details
 

@@ -46,6 +46,16 @@ async function buildExtension() {
   await fs.copy(path.join(publicDir, 'content-script.js'), path.join(distDir, 'content-script.js'));
   await fs.copy(path.join(publicDir, 'content-styles.css'), path.join(distDir, 'content-styles.css'));
 
+  // Update popup.html to include CSS
+  const popupHtmlPath = path.join(distDir, 'popup.html');
+  let popupHtml = await fs.readFile(popupHtmlPath, 'utf8');
+  
+  // Add CSS link before the closing </head> tag
+  const cssLink = '  <link rel="stylesheet" href="style.css">\n';
+  popupHtml = popupHtml.replace('</head>', cssLink + '</head>');
+  
+  await fs.writeFile(popupHtmlPath, popupHtml);
+
   console.log('✅ Extension built successfully in dist/ folder');
   console.log('📦 To install: Go to chrome://extensions/, enable Developer mode, and click "Load unpacked" to select the dist folder');
 }

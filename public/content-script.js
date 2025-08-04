@@ -135,7 +135,9 @@
             if (!detectedBrands.find(db => db.name === brand.name)) {
               detectedBrands.push({
                 name: brand.name,
-                categories: brand.categories.filter(cat => enabledCategories.includes(cat))
+                categories: brand.categories.filter(cat => enabledCategories.includes(cat)),
+                placeholder: brand.placeholder,
+                links: brand.links
               });
             }
             
@@ -218,6 +220,7 @@
         break;
         
       case 'get_detected_brands':
+        console.log('Content script sending detected brands:', detectedBrands);
         sendResponse({ brands: detectedBrands });
         break;
         

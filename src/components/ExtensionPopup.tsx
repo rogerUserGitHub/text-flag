@@ -4,12 +4,17 @@ import { Switch } from '@/components/ui/switch';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardHeader, CardContent } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
-import { AlertTriangle, CheckCircle, Shield, Leaf, Users, Scan, Zap, Eye, EyeOff } from 'lucide-react';
+import { AlertTriangle, CheckCircle, Shield, Leaf, Users, Scan, Zap, Eye, EyeOff, Settings, ExternalLink } from 'lucide-react';
 
 // Brand interface matching the new data structure
 interface Brand {
   name: string;
   categories: string[];
+  placeholder?: string;
+  links?: Array<{
+    text: string;
+    url: string;
+  }>;
 }
 
 interface BrandData {
@@ -18,6 +23,11 @@ interface BrandData {
     name: string;
     variants: string[];
     categories: string[];
+    placeholder?: string;
+    links?: Array<{
+      text: string;
+      url: string;
+    }>;
   }>;
 }
 
@@ -89,7 +99,9 @@ const ExtensionPopup: React.FC = () => {
       const [activeTab] = await chrome.tabs.query({ active: true, currentWindow: true });
       if (activeTab.id) {
         const response = await chrome.tabs.sendMessage(activeTab.id, { type: 'get_detected_brands' });
+        console.log('Popup received response:', response);
         if (response && response.brands) {
+          console.log('Setting detected brands:', response.brands);
           setDetectedBrands(response.brands);
         }
       }
@@ -167,11 +179,11 @@ const ExtensionPopup: React.FC = () => {
   // Get category color
   const getCategoryColor = (category: string): string => {
     const colors = {
-      BDS: 'bg-red-50 text-red-700 border-red-200 hover:bg-red-100',
-      Environmental: 'bg-emerald-50 text-emerald-700 border-emerald-200 hover:bg-emerald-100',
-      Labor: 'bg-blue-50 text-blue-700 border-blue-200 hover:bg-blue-100'
+      BDS: 'bg-red-900/20 text-red-300 border-red-700/30',
+      Environmental: 'bg-emerald-900/20 text-emerald-300 border-emerald-700/30',
+      Labor: 'bg-blue-900/20 text-blue-300 border-blue-700/30'
     };
-    return colors[category as keyof typeof colors] || 'bg-gray-50 text-gray-700 border-gray-200 hover:bg-gray-100';
+    return colors[category as keyof typeof colors] || 'bg-gray-900/20 text-gray-300 border-gray-700/30';
   };
 
   // Get category icon
@@ -187,9 +199,11 @@ const ExtensionPopup: React.FC = () => {
 
   // Get detected brands for enabled categories
   const getDetectedBrandsForCategory = () => {
-    return detectedBrands.filter(brand => 
+    const filtered = detectedBrands.filter(brand => 
       brand.categories.some(cat => enabledCategories.includes(cat))
     );
+    console.log('Filtered detected brands:', filtered);
+    return filtered;
   };
 
   // Get brand count for category
@@ -200,209 +214,254 @@ const ExtensionPopup: React.FC = () => {
     ).length;
   };
 
+  // Get unique brand description
+  const getBrandDescription = (brand: Brand): string => {
+    if (!brandData) return '';
+    
+    // Use placeholder text if available
+    if (brand.placeholder) {
+      return brand.placeholder;
+    }
+    
+    const categoryDescriptions = brand.categories
+      .filter(cat => enabledCategories.includes(cat))
+      .map(cat => brandData.categories[cat].description);
+    
+    if (categoryDescriptions.length === 0) return '';
+    if (categoryDescriptions.length === 1) return categoryDescriptions[0];
+    
+    // For multiple categories, create a combined description
+    return `Issues: ${categoryDescriptions.join('; ')}`;
+  };
+
+  // Get brand links
+  const getBrandLinks = (brand: Brand) => {
+    return brand.links || [];
+  };
+
   if (isLoading) {
     return (
-      <div className="w-80 h-96 flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+      <div className="w-80 h-96 flex items-center justify-center bg-gray-900">
         <div className="text-center">
-          <div className="relative">
-            <div className="animate-spin rounded-full h-12 w-12 border-4 border-slate-200 border-t-blue-600 mx-auto mb-4"></div>
-            <div className="absolute inset-0 animate-ping rounded-full h-12 w-12 border-2 border-blue-400 opacity-20"></div>
-          </div>
-          <p className="text-sm font-medium text-slate-600">Scanning page...</p>
+          <div className="animate-spin rounded-full h-8 w-8 border-2 border-gray-600 border-t-blue-400 mx-auto mb-3"></div>
+          <p className="text-sm text-gray-300">Scanning page...</p>
         </div>
       </div>
     );
   }
 
   const visibleDetectedBrands = getDetectedBrandsForCategory();
+  
+  // Debug: Add test brands if none detected
+  const testBrands = visibleDetectedBrands.length === 0 ? [
+    {
+      name: "Nestlé",
+      categories: ["BDS", "Environmental"],
+      placeholder: "Major water privatization and BDS violations in occupied territories",
+      links: [
+        {
+          text: "Water privatization",
+          url: "https://www.theguardian.com/global-development/2021/jul/28/nestle-water-privatization-bottled-water-business"
+        },
+        {
+          text: "BDS violations",
+          url: "https://bdsmovement.net/news/nestle-continues-operate-illegal-settlements"
+        }
+      ]
+    }
+  ] : [];
+  
+  const displayBrands = visibleDetectedBrands.length > 0 ? visibleDetectedBrands : testBrands;
 
   return (
-    <div className="w-80 h-96 bg-gradient-to-br from-slate-50 via-white to-slate-50 border border-slate-200/50 overflow-hidden flex flex-col shadow-xl">
-      {/* Header with gradient */}
-      <div className="relative p-4 bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 text-white">
-        <div className="absolute inset-0 bg-black/10"></div>
-        <div className="relative flex items-center justify-between">
+    <div className="w-full h-full bg-gray-900 text-gray-100 flex flex-col overflow-hidden relative z-50">
+      {/* Header */}
+      <div className="flex-shrink-0 p-4 border-b border-gray-800">
+        <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {/* Logo space */}
-            <div className="w-8 h-8 bg-white/20 rounded-lg backdrop-blur-sm flex items-center justify-center border border-white/30">
-              <Shield className="w-4 h-4 text-white" />
+            <div className="w-16 h-16 rounded-full flex items-center justify-center bg-white/10">
+              <img src="/logo.png" alt="Logo" className="w-12 h-12" />
             </div>
-            <div>
-              <h1 className="text-lg font-bold">Ethical ScannerXX</h1>
-              <p className="text-xs text-blue-100">Brand transparency tool</p>
-            </div>
+            <span className="text-lg font-semibold">ClearLabel</span>
           </div>
-          <Badge variant="secondary" className="bg-white/20 text-white border-white/30 backdrop-blur-sm">
+          <Badge variant="secondary" className="bg-gray-700 text-gray-200 border-gray-600">
             Free
           </Badge>
         </div>
       </div>
 
       {/* Content */}
-      <div className="flex-1 overflow-y-auto bg-white/50 backdrop-blur-sm">
-        <div className="p-4 space-y-4">
-          {/* Quick Actions */}
-          <div className="grid grid-cols-2 gap-3">
-            <Card className="border-0 shadow-sm bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 transition-all duration-200">
-              <CardContent className="p-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-blue-100 rounded-md">
-                      <Zap className="w-4 h-4 text-blue-600" />
-                    </div>
-                    <div>
-                      <p className="text-xs font-medium text-slate-700">Auto Scan</p>
-                      <p className="text-xs text-slate-500">Continuous</p>
-                    </div>
-                  </div>
-                  <Switch checked={autoScanEnabled} onCheckedChange={toggleAutoScan} />
+      <div className="flex-1 min-h-0 overflow-y-auto overflow-x-hidden">
+        <div className="space-y-6">
+          <div className="px-4 pt-4">            
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-200">Auto scan on page load</p>
+                  <p className="text-xs text-gray-400">Continuously monitor for brands</p>
                 </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-sm bg-gradient-to-br from-emerald-50 to-green-50 hover:from-emerald-100 hover:to-green-100 transition-all duration-200">
-              <CardContent className="p-3">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="p-1.5 bg-emerald-100 rounded-md">
-                      {isHighlighting ? (
-                        <EyeOff className="w-4 h-4 text-emerald-600" />
-                      ) : (
-                        <Eye className="w-4 h-4 text-emerald-600" />
-                      )}
-                    </div>
-                    <div>
-                      <p className="text-xs font-medium text-slate-700">Manual Scan</p>
-                      <p className="text-xs text-slate-500">On-demand</p>
-                    </div>
-                  </div>
-                  <Button
-                    onClick={toggleHighlighting}
-                    variant={isHighlighting ? "destructive" : "default"}
-                    size="sm"
-                    className="h-7 px-2 text-xs"
-                  >
-                    {isHighlighting ? 'Stop' : 'Start'}
-                  </Button>
+                <Switch checked={autoScanEnabled} onCheckedChange={toggleAutoScan} />
+              </div>
+              
+              <div className="flex items-center justify-between">
+                <div>
+                  <p className="text-sm text-gray-200">Manual scan mode</p>
+                  <p className="text-xs text-gray-400">Highlight brands on demand</p>
                 </div>
-              </CardContent>
-            </Card>
+                <Button
+                  onClick={toggleHighlighting}
+                  variant={isHighlighting ? "destructive" : "outline"}
+                  size="sm"
+                  className="h-8 px-3 text-xs flex-shrink-0"
+                >
+                  {isHighlighting ? 'Stop' : 'Start'}
+                </Button>
+              </div>
+            </div>
           </div>
 
-          {/* Categories */}
-          <Card className="border-0 shadow-sm bg-white/70 backdrop-blur-sm">
-            <CardHeader className="pb-3">
-              <div className="flex items-center gap-2">
-                <div className="p-1.5 bg-slate-100 rounded-md">
-                  <Scan className="w-4 h-4 text-slate-600" />
-                </div>
-                <h3 className="font-semibold text-slate-800">Scan Categories</h3>
+          <Separator className="bg-gray-800" />
+
+          {/* Detected Brands */}
+          <div className="px-4 pb-4">
+            <div className="flex items-center justify-between mb-4">
+                              <h3 className="font-semibold text-gray-100">Detected Brands</h3>
+                {displayBrands.length > 0 && (
+                  <Badge variant="destructive" className="text-xs">
+                    {displayBrands.length}
+                  </Badge>
+                )}
+            </div>
+            
+            {displayBrands.length === 0 ? (
+              <div className="text-center py-6">
+                <CheckCircle className="w-8 h-8 text-emerald-400 mx-auto mb-2" />
+                <p className="text-sm text-gray-300 mb-1">All clear!</p>
+                <p className="text-xs text-gray-400">No flagged brands detected</p>
               </div>
-            </CardHeader>
-            <CardContent className="space-y-3">
+            ) : (
+              <div className="space-y-2">
+                {displayBrands.map((brand, index) => (
+                  <div key={index} className="space-y-2">
+                    <div
+                      className="flex items-center gap-3 p-3 rounded-lg border border-red-800/30 bg-red-900/10 hover:bg-red-900/20 cursor-pointer transition-colors"
+                      onClick={() => setSelectedBrand(selectedBrand === brand.name ? null : brand.name)}
+                    >
+                      <AlertTriangle className="w-4 h-4 text-red-400" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-200 truncate">{brand.name}</p>
+                        <p className="text-xs text-gray-400 mt-1 line-clamp-2">{getBrandDescription(brand)}</p>
+                        <div className="flex gap-1 mt-2">
+                          {brand.categories.map((cat) => (
+                            <Badge
+                              key={cat}
+                              variant="outline"
+                              className={`text-xs ${getCategoryColor(cat)}`}
+                            >
+                              {cat}
+                            </Badge>
+                          ))}
+                        </div>
+                        {getBrandLinks(brand).length > 0 && (
+                          <div className="flex flex-col gap-1 mt-2">
+                            {getBrandLinks(brand).map((link, index) => (
+                              <a
+                                key={index}
+                                href={link.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-xs text-blue-400 hover:text-blue-300 underline"
+                                title={link.url}
+                              >
+                                {link.text}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                      <span className="text-xs text-gray-400">
+                        {selectedBrand === brand.name ? '−' : '+'}
+                      </span>
+                    </div>
+                    
+                    {selectedBrand === brand.name && brandData && (
+                      <div className="ml-6 p-3 bg-gray-800/50 rounded-lg border border-gray-700 relative z-10">
+                        <div className="space-y-3">
+                          <div className="text-xs">
+                            <p className="text-gray-300 font-medium mb-2">Why this brand is flagged:</p>
+                            <p className="text-gray-400 leading-relaxed">{getBrandDescription(brand)}</p>
+                          </div>
+                          {getBrandLinks(brand).length > 0 && (
+                            <div className="text-xs">
+                              <p className="text-gray-300 font-medium mb-2">Learn more:</p>
+                              <div className="space-y-1">
+                                {getBrandLinks(brand).map((link, index) => (
+                                  <a
+                                    key={index}
+                                    href={link.url}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="block text-blue-400 hover:text-blue-300 underline"
+                                    title={link.url}
+                                  >
+                                    → {link.text}
+                                  </a>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+                          <div className="text-xs">
+                            <p className="text-gray-300 font-medium mb-2">Categories:</p>
+                            <div className="flex flex-wrap gap-1">
+                              {brand.categories.map((cat) => {
+                                const categoryInfo = brandData.categories[cat];
+                                return (
+                                  <div key={cat} className="flex items-center gap-1 px-2 py-1 bg-gray-700 rounded">
+                                    {getCategoryIcon(cat)}
+                                    <span className="text-gray-200">{categoryInfo.name}</span>
+                                  </div>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+
+
+          <Separator className="bg-gray-800" />
+
+          {/* Scan Categories */}
+          <div className="px-4">
+            <h3 className="font-semibold text-gray-100 mb-4">Scan Categories</h3>
+            <div className="space-y-3">
               {['BDS', 'Environmental', 'Labor'].map((category) => (
-                <div key={category} className="flex items-center justify-between p-2 rounded-lg hover:bg-slate-50 transition-colors">
-                  <div className="flex items-center gap-3">
-                    <div className="p-1.5 bg-slate-100 rounded-md">
+                <div key={category} className="flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors">
+                  <div className="flex items-center gap-3 min-w-0 flex-1">
+                    <div className="p-1.5 bg-gray-800 rounded-md flex-shrink-0">
                       {getCategoryIcon(category)}
                     </div>
-                    <div>
-                      <label className="text-sm font-medium text-slate-700">{category}</label>
-                      <div className="flex items-center gap-1 mt-0.5">
-                        <Badge variant="outline" className="text-xs bg-white/50">
-                          {getBrandCountForCategory(category)} brands
-                        </Badge>
-                      </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm text-gray-200 truncate">{category}</p>
+                      <p className="text-xs text-gray-400 truncate">{getBrandCountForCategory(category)} brands</p>
                     </div>
                   </div>
                   <Switch
                     checked={enabledCategories.includes(category)}
                     onCheckedChange={() => toggleCategory(category)}
+                    className="flex-shrink-0"
                   />
                 </div>
               ))}
-            </CardContent>
-          </Card>
+            </div>
+          </div>
 
-          {/* Detected Brands */}
-          <Card className="border-0 shadow-sm bg-white/70 backdrop-blur-sm">
-            <CardHeader className="pb-3">
-              <div className="flex items-center gap-2">
-                <div className="p-1.5 bg-red-100 rounded-md">
-                  <AlertTriangle className="w-4 h-4 text-red-600" />
-                </div>
-                <h3 className="font-semibold text-slate-800">Detected Brands</h3>
-                {visibleDetectedBrands.length > 0 && (
-                  <Badge variant="destructive" className="ml-auto text-xs">
-                    {visibleDetectedBrands.length}
-                  </Badge>
-                )}
-              </div>
-            </CardHeader>
-            <CardContent>
-              {visibleDetectedBrands.length === 0 ? (
-                <div className="text-center py-6">
-                  <div className="relative mb-3">
-                    <CheckCircle className="w-12 h-12 text-emerald-500 mx-auto" />
-                    <div className="absolute inset-0 animate-ping rounded-full bg-emerald-400 opacity-20"></div>
-                  </div>
-                  <p className="text-sm font-medium text-slate-700 mb-1">All clear!</p>
-                  <p className="text-xs text-slate-500">No flagged brands detected on this page</p>
-                </div>
-              ) : (
-                <div className="space-y-2">
-                  {visibleDetectedBrands.map((brand, index) => (
-                    <div key={index} className="space-y-2">
-                      <div
-                        className="flex items-center gap-3 p-3 rounded-lg border border-red-200 bg-red-50/50 hover:bg-red-50 cursor-pointer transition-all duration-200 group"
-                        onClick={() => setSelectedBrand(selectedBrand === brand.name ? null : brand.name)}
-                      >
-                        <div className="p-1.5 bg-red-100 rounded-md group-hover:bg-red-200 transition-colors">
-                          <AlertTriangle className="w-4 h-4 text-red-600" />
-                        </div>
-                        <div className="flex-1 min-w-0">
-                          <span className="text-sm font-semibold text-slate-800 truncate block">{brand.name}</span>
-                          <div className="flex gap-1 mt-1">
-                            {brand.categories.map((cat) => (
-                              <Badge
-                                key={cat}
-                                variant="outline"
-                                className={`text-xs ${getCategoryColor(cat)}`}
-                              >
-                                {cat}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-                        <div className="text-xs text-slate-400 group-hover:text-slate-600 transition-colors">
-                          {selectedBrand === brand.name ? '−' : '+'}
-                        </div>
-                      </div>
-                      
-                      {selectedBrand === brand.name && brandData && (
-                        <div className="ml-6 p-4 bg-slate-50/80 rounded-lg border border-slate-200">
-                          <div className="space-y-3">
-                            {brand.categories.map((cat) => {
-                              const categoryInfo = brandData.categories[cat];
-                              return (
-                                <div key={cat} className="text-xs">
-                                  <div className="flex items-center gap-2 mb-1">
-                                    {getCategoryIcon(cat)}
-                                    <span className="font-semibold text-slate-800">{categoryInfo.name}</span>
-                                  </div>
-                                  <p className="text-slate-600 leading-relaxed ml-6">{categoryInfo.description}</p>
-                                </div>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              )}
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>

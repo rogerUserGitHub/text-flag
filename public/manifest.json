@@ -1,15 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "Brand Scanner",
+  "name": "ClearLabel",
   "version": "1.0.0",
-  "description": "Scan webpages for brand names and highlight them based on categories",
+  "description": "Ethical brand scanner - identify and flag brands with ethical concerns",
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
   "permissions": [
     "storage",
     "activeTab"
   ],
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Brand Scanner"
+    "default_title": "ClearLabel - Ethical Brand Scanner"
   },
   "content_scripts": [
     {
@@ -20,7 +25,7 @@
   ],
   "web_accessible_resources": [
     {
-      "resources": ["brandList.json"],
+      "resources": ["brandList.json", "logo.png"],
       "matches": ["<all_urls>"]
     }
   ]
