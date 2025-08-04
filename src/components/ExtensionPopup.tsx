@@ -228,7 +228,7 @@ const ExtensionPopup: React.FC = () => {
               <Shield className="w-4 h-4 text-white" />
             </div>
             <div>
-              <h1 className="text-lg font-bold">Ethical Scanner</h1>
+              <h1 className="text-lg font-bold">Ethical ScannerXX</h1>
               <p className="text-xs text-blue-100">Brand transparency tool</p>
             </div>
           </div>
