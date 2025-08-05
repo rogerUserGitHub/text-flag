@@ -13,22 +13,24 @@ interface Brand {
   placeholder?: string;
   links?: Array<{
     text: string;
-    url: string;
+    url?: string; // For backward compatibility
+    urls?: string[]; // New array of URLs
   }>;
 }
 
 interface BrandData {
   categories: Record<string, { name: string; description: string }>;
-  brands: Array<{
-    name: string;
-    variants: string[];
-    categories: string[];
-    placeholder?: string;
-    links?: Array<{
-      text: string;
-      url: string;
+      brands: Array<{
+      name: string;
+      variants: string[];
+      categories: string[];
+      placeholder?: string;
+      links?: Array<{
+        text: string;
+        url?: string; // For backward compatibility
+        urls?: string[]; // New array of URLs
+      }>;
     }>;
-  }>;
 }
 
 const ExtensionPopup: React.FC = () => {
@@ -305,7 +307,7 @@ const ExtensionPopup: React.FC = () => {
               
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-sm text-gray-200">Manual scan mode</p>
+                  <p className="text-sm text-red-200">Manual scan mode</p>
                   <p className="text-xs text-gray-400">Highlight brands on demand</p>
                 </div>
                 <Button
@@ -325,7 +327,7 @@ const ExtensionPopup: React.FC = () => {
           {/* Detected Brands */}
           <div className="px-4 pb-4">
             <div className="flex items-center justify-between mb-4">
-                              <h3 className="font-semibold text-gray-100">Detected Brands</h3>
+                <h3 className="font-semibold text-gray-100">Detected Brands</h3>
                 {displayBrands.length > 0 && (
                   <Badge variant="destructive" className="text-xs">
                     {displayBrands.length}
@@ -364,18 +366,23 @@ const ExtensionPopup: React.FC = () => {
                         </div>
                         {getBrandLinks(brand).length > 0 && (
                           <div className="flex flex-col gap-1 mt-2">
-                            {getBrandLinks(brand).map((link, index) => (
-                              <a
-                                key={index}
-                                href={link.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="text-xs text-blue-400 hover:text-blue-300 underline"
-                                title={link.url}
-                              >
-                                {link.text}
-                              </a>
-                            ))}
+                            {getBrandLinks(brand).map((link, index) => {
+                              // Handle both single URL and array of URLs
+                              const urls = link.urls || (link.url ? [link.url] : []);
+                              
+                              return urls.map((url, urlIndex) => (
+                                <a
+                                  key={`${index}-${urlIndex}`}
+                                  href={url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-xs text-blue-400 hover:text-blue-300 underline"
+                                  title={url}
+                                >
+                                  {link.text} {urls.length > 1 ? `(${urlIndex + 1})` : ''}
+                                </a>
+                              ));
+                            })}
                           </div>
                         )}
                       </div>
@@ -395,18 +402,23 @@ const ExtensionPopup: React.FC = () => {
                             <div className="text-xs">
                               <p className="text-gray-300 font-medium mb-2">Learn more:</p>
                               <div className="space-y-1">
-                                {getBrandLinks(brand).map((link, index) => (
-                                  <a
-                                    key={index}
-                                    href={link.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="block text-blue-400 hover:text-blue-300 underline"
-                                    title={link.url}
-                                  >
-                                    → {link.text}
-                                  </a>
-                                ))}
+                                {getBrandLinks(brand).map((link, index) => {
+                                  // Handle both single URL and array of URLs
+                                  const urls = link.urls || (link.url ? [link.url] : []);
+                                  
+                                  return urls.map((url, urlIndex) => (
+                                    <a
+                                      key={`${index}-${urlIndex}`}
+                                      href={url}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="block text-blue-400 hover:text-blue-300 underline"
+                                      title={url}
+                                    >
+                                      → {link.text} {urls.length > 1 ? `(${urlIndex + 1})` : ''}
+                                    </a>
+                                  ));
+                                })}
                               </div>
                             </div>
                           )}

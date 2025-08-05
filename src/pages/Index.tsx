@@ -12,7 +12,7 @@ const Index = () => {
           <div className="flex items-center justify-center space-x-3">
             <Shield className="w-16 h-16 text-primary" />
             <h1 className="text-6xl font-bold bg-gradient-to-r from-primary via-blue-600 to-green-600 bg-clip-text text-transparent">
-              Ethical Brand Scanner
+              ClearLabel -  Your Ethical Brand Scanner
             </h1>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -57,7 +57,7 @@ const Index = () => {
               </Button>
             </div>
             <div className="text-sm text-muted-foreground">
-              Currently in development - view source code on GitHub or follow installation instructions below
+              Currently in development/under Google review - view source code on GitHub or follow installation instructions below
             </div>
           </div>
         </div>

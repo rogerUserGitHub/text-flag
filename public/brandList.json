@@ -2,15 +2,15 @@
   "categories": {
     "BDS": {
       "name": "BDS",
-      "description": "Companies that support or operate in occupied territories, violating international law"
+      "description": "Companies reported to support or operate in occupied territories, violating international law"
     },
     "Environmental": {
       "name": "Environmental",
-      "description": "Companies with poor environmental practices, pollution, or climate change denial"
+      "description": "Companies reported with poor environmental practices, pollution, or climate change denial"
     },
     "Labor": {
       "name": "Labor",
-      "description": "Companies with poor labor conditions, worker exploitation, or union suppression"
+      "description": "Companies report with poor labor conditions, worker exploitation, or union suppression"
     }
   },
   "brands": [
@@ -22,187 +22,944 @@
       "links": [
         {
           "text": "Water privatization",
-          "url": "https://www.theguardian.com/global-development/2021/jul/28/nestle-water-privatization-bottled-water-business"
+          "urls": [
+            "https://www.un.org/waterforlifedecade/water_corporations.shtml",
+            "https://www.ohchr.org/en/press-releases/2022/07/water-should-be-treated-as-human-right-not-commodity-un-expert"
+          ]
         },
         {
           "text": "BDS violations",
-          "url": "https://bdsmovement.net/news/nestle-continues-operate-illegal-settlements"
-        },
-        {
-          "text": "Water privatization",
-          "url": "https://www.theguardian.com/global-development/2021/jul/28/nestle-water-privatization-bottled-water-business"
-        },
-        {
-          "text": "BDS violations",
-          "url": "https://bdsmovement.net/news/nestle-continues-operate-illegal-settlements"
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
         }
       ]
     },
     {
       "name": "HP",
-      "variants": ["HP", "Hewlett-Packard", "Hewlett Packard", "hp"],
+      "variants": ["HP", "Hewlett-Packard", "hp", "hewlett packard"],
       "categories": ["BDS"],
-      "placeholder": "Technology infrastructure supporting Israeli occupation",
+      "placeholder": "Provides surveillance and biometric tech to Israeli military and prisons",
       "links": [
         {
-          "text": "BDS campaign",
-          "url": "https://bdsmovement.net/campaigns/hp"
+          "text": "BDS violations",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
         },
         {
-          "text": "Occupation technology",
-          "url": "https://www.who-profits.org/company/hewlett-packard-enterprise"
+          "text": "Surveillance in occupied territories",
+          "urls": [
+            "https://www.ohchr.org/en/statements/2022/08/israels-surveillance-palestinians-human-rights-concerns-un-experts"
+          ]
         }
       ]
     },
     {
       "name": "Puma",
-      "variants": ["Puma", "PUMA", "puma"],
+      "variants": ["Puma", "puma", "PUMA"],
       "categories": ["BDS"],
-      "placeholder": "Sponsoring Israeli football teams in occupied territories",
+      "placeholder": "Sponsors Israeli football teams in illegal settlements",
       "links": [
         {
-          "text": "Football sponsorship",
-          "url": "https://bdsmovement.net/news/puma-sponsors-israeli-football-teams"
+          "text": "BDS campaign",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
         }
       ]
     },
     {
-      "name": "Coca-Cola",
-      "variants": ["Coca-Cola", "Coca Cola", "Coke", "COCA-COLA", "coca-cola", "coke"],
-      "categories": ["Environmental"],
-      "placeholder": "Major plastic pollution and water depletion",
+      "name": "AXA",
+      "variants": ["AXA", "axa", "Axa Group"],
+      "categories": ["BDS"],
+      "placeholder": "Invests in arms companies supplying weapons to Israel",
       "links": [
-        {
-          "text": "Plastic pollution",
-          "url": "https://www.breakfreefromplastic.org/globalbrandauditreport2021/"
-        },
-        {
-          "text": "Water depletion",
-          "url": "https://www.theguardian.com/environment/2020/dec/17/coca-cola-named-worlds-biggest-plastic-polluter"
-        }
-      ]
-    },
-    {
-      "name": "McDonald's",
-      "variants": ["McDonald's", "McDonalds", "MCDONALD'S", "mcdonald's", "McD", "mcd"],
-      "categories": ["Environmental", "Labor"],
-      "placeholder": "Deforestation for beef and poor worker conditions",
-      "links": [
-        {
-          "text": "Deforestation",
-          "url": "https://www.mightyearth.org/mcdonalds-deforestation/"
-        },
-        {
-          "text": "Worker conditions",
-          "url": "https://www.fightfor15.org/mcdonalds-workers/"
-        }
-      ]
-    },
-    {
-      "name": "Amazon",
-      "variants": ["Amazon", "AMAZON", "amazon", "Amazon.com"],
-      "categories": ["Labor", "Environmental"],
-      "placeholder": "Worker exploitation and massive carbon footprint",
-      "links": [
-        {
-          "text": "Worker conditions",
-          "url": "https://www.theguardian.com/technology/2021/apr/28/amazon-workers-union-organizing"
-        },
-        {
-          "text": "Environmental impact",
-          "url": "https://www.theverge.com/2021/7/14/22577823/amazon-carbon-footprint-climate-change"
-        }
-      ]
-    },
-    {
-      "name": "Apple",
-      "variants": ["Apple", "APPLE", "apple", "Apple Inc", "Apple Inc."],
-      "categories": ["Labor"],
-      "placeholder": "Foxconn labor violations and supply chain exploitation",
-      "links": [
-        {
-          "text": "Foxconn violations",
-          "url": "https://www.theguardian.com/technology/2021/sep/08/apple-foxconn-factory-workers-rights"
-        },
-        {
-          "text": "Supply chain",
-          "url": "https://www.amnesty.org/en/latest/news/2016/03/apple-and-samsung-failing-to-tackle-child-labour-allegations/"
-        }
-      ]
-    },
-    {
-      "name": "Nike",
-      "variants": ["Nike", "NIKE", "nike"],
-      "categories": ["Labor", "BDS"],
-      "placeholder": "Sweatshop labor and BDS violations",
-      "links": [
-        {
-          "text": "Sweatshop labor",
-          "url": "https://www.cleanclothes.org/campaigns/nike"
-        },
         {
           "text": "BDS violations",
-          "url": "https://bdsmovement.net/news/nike-sponsors-israeli-sports"
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "CAF",
+      "variants": ["CAF", "caf", "Construcciones y Auxiliar de Ferrocarriles"],
+      "categories": ["BDS"],
+      "placeholder": "Builds railways connecting illegal Israeli settlements",
+      "links": [
+        {
+          "text": "Settlement infrastructure",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chevron",
+      "variants": ["Chevron", "chevron", "Chevron Corporation"],
+      "categories": ["BDS", "Environmental"],
+      "placeholder": "Operates gas fields off Gaza coast and supports Israeli energy sector",
+      "links": [
+        {
+          "text": "Gas operations in Israel",
+          "urls": [
+            "https://www.reuters.com/business/energy/chevron-expands-israel-gas-operations-2022-06-29/",
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Carrefour",
+      "variants": ["Carrefour", "carrefour"],
+      "categories": ["BDS"],
+      "placeholder": "Linked to operations in Israeli settlements",
+      "links": [
+        {
+          "text": "Settlement commerce",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
         }
       ]
     },
     {
       "name": "Starbucks",
-      "variants": ["Starbucks", "STARBUCKS", "starbucks"],
-      "categories": ["BDS"],
-      "placeholder": "Operating in illegal settlements",
+      "variants": ["Starbucks", "starbucks", "STARBUCKS"],
+      "categories": ["BDS", "Labor"],
+      "placeholder": "Sued union over pro-Palestinian messaging and accused of supporting Israeli military",
       "links": [
         {
-          "text": "Settlement operations",
-          "url": "https://bdsmovement.net/news/starbucks-operates-illegal-settlements"
+          "text": "Union suppression and boycott",
+          "urls": [
+            "https://www.reuters.com/legal/starbucks-workers-union-sues-company-over-pro-palestinian-social-media-2023-11-03/",
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.nlrb.gov/case/20-CA-301119"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "McDonald's",
+      "variants": ["McDonald's", "McDonalds", "mcdonalds", "MCDONALD'S"],
+      "categories": ["BDS", "Labor"],
+      "placeholder": "Franchise support for Israeli military and legal action against BDS activists",
+      "links": [
+        {
+          "text": "Franchise donations and boycott",
+          "urls": [
+            "https://time.com/6694986/israel-palestine-bds-boycotts-starbucks-mcdonalds/",
+            "https://www.reuters.com/world/middle-east/mcdonalds-franchise-owner-israel-donates-meals-military-2023-10-16/",
+            "https://www.dol.gov/newsroom/releases/whd/whd20230720"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Elbit Systems",
+      "variants": ["Elbit", "Elbit Systems", "elbit", "ELBIT"],
+      "categories": ["BDS"],
+      "placeholder": "Israel's largest arms manufacturer, complicit in war crimes and surveillance",
+      "links": [
+        {
+          "text": "Military complicity",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Activist pressure",
+          "urls": [
+            "https://www.reuters.com/world/middle-east/protesters-target-israeli-arms-maker-elbit-systems-2023-10-20/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Caterpillar",
+      "variants": ["Caterpillar", "CAT", "cat", "CATERPILLAR"],
+      "categories": ["BDS"],
+      "placeholder": "Bulldozers used in demolitions, settlement infrastructure, and military operations",
+      "links": [
+        {
+          "text": "Demolition equipment",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Human rights concerns",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "JCB",
+      "variants": ["JCB", "jcb", "J.C. Bamford", "J.C Bamford Excavators"],
+      "categories": ["BDS"],
+      "placeholder": "Heavy machinery used in demolitions and settlement construction in occupied territories",
+      "links": [
+        {
+          "text": "UN listing and demolition use",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "OECD complaint and human rights violations",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Siemens",
+      "variants": ["Siemens", "siemens", "SIEMENS"],
+      "categories": ["BDS", "Environmental"],
+      "placeholder": "Involved in infrastructure projects crossing into occupied territories and environmental controversies",
+      "links": [
+        {
+          "text": "Rail and energy projects in settlements",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "BDS campaign and complicity",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Burger King",
+      "variants": ["Burger King", "burger king", "BURGER KING"],
+      "categories": ["BDS"],
+      "placeholder": "Franchise accused of donating meals to Israeli military during Gaza operations",
+      "links": [
+        {
+          "text": "Franchise support for IDF",
+          "urls": [
+            "https://time.com/6694986/israel-palestine-bds-boycotts-starbucks-mcdonalds/",
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        },
+        {
+          "text": "Global boycott response",
+          "urls": [
+            "https://time.com/6694986/israel-palestine-bds-boycotts-starbucks-mcdonalds/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Hyundai",
+      "variants": ["Hyundai", "hyundai", "Hyundai Heavy Industries", "Hyundai Motor Group"],
+      "categories": ["BDS"],
+      "placeholder": "Construction equipment used in home demolitions and settlement expansion",
+      "links": [
+        {
+          "text": "BDS campaign and demolition use",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Boycott listing and brand impact",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Domino's",
+      "variants": ["Domino's", "Dominos", "domino's", "DOMINO'S"],
+      "categories": ["BDS"],
+      "placeholder": "Franchise accused of supporting Israeli troops and facing regional boycotts",
+      "links": [
+        {
+          "text": "Franchise support and boycott impact",
+          "urls": [
+            "https://time.com/6972603/pro-palestinian-boycotts-fast-food-chains-israel-muslim-countries/",
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        },
+        {
+          "text": "BDS campaign listing",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Disney",
+      "variants": ["Disney", "disney", "Walt Disney", "Disney+"],
+      "categories": ["BDS"],
+      "placeholder": "Donated to Israeli organizations during Gaza conflict, sparking global boycott",
+      "links": [
+        {
+          "text": "Donations and boycott response",
+          "urls": [
+            "https://www.reuters.com/world/middle-east/disney-donates-israel-humanitarian-aid-2023-10-16/",
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        },
+        {
+          "text": "Gen Z and BDS boycott campaign",
+          "urls": [
+            "https://www.reuters.com/world/middle-east/young-people-lead-boycott-campaigns-against-israel-2023-10-20/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unilever",
+      "variants": ["Unilever", "unilever"],
+      "categories": ["BDS"],
+      "placeholder": "Parent company of Ben & Jerry's, accused of undermining boycott of Israeli settlements",
+      "links": [
+        {
+          "text": "BDS campaign and settlement ties",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Legal dispute over Ben & Jerry's boycott",
+          "urls": [
+            "https://www.reuters.com/legal/unilever-sells-ben-jerrys-israel-business-2022-07-05/",
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Danone",
+      "variants": ["Danone", "danone"],
+      "categories": ["Environmental", "Labor"],
+      "placeholder": "Sued for failing to comply with France's duty of vigilance law over plastic pollution and labor violations",
+      "links": [
+        {
+          "text": "Environmental violations and plastics lawsuit",
+          "urls": [
+            "https://www.reuters.com/sustainability/danone-faces-lawsuit-over-plastic-pollution-2023-01-17/",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-plastic-pollution"
+          ]
+        },
+        {
+          "text": "Labor and safety violations",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Re/Max",
+      "variants": ["Re/Max", "RE/MAX", "remax", "Remax"],
+      "categories": ["BDS"],
+      "placeholder": "Real estate company involved in selling properties in illegal Israeli settlements",
+      "links": [
+        {
+          "text": "BDS campaign and settlement sales",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Pressure from religious groups",
+          "urls": [
+            "https://www.reuters.com/world/middle-east/religious-groups-pressure-companies-israel-2023-10-20/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ahava",
+      "variants": ["Ahava", "AHAVA", "ahava"],
+      "categories": ["BDS"],
+      "placeholder": "Cosmetics company operating in illegal Israeli settlements and exploiting Dead Sea resources",
+      "links": [
+        {
+          "text": "Settlement operations and boycott",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Volvo",
+      "variants": ["Volvo", "volvo", "Volvo Group", "Volvo Trucks"],
+      "categories": ["BDS", "Environmental", "Labor"],
+      "placeholder": "Supplies equipment used in demolitions and owns stake in prisoner transport firm",
+      "links": [
+        {
+          "text": "BDS campaign and settlement complicity",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Environmental and labor violations",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SodaStream",
+      "variants": ["SodaStream", "sodastream", "SODASTREAM"],
+      "categories": ["BDS"],
+      "placeholder": "Operated in illegal settlements and continues to face boycott for labor abuses and displacement of Bedouins",
+      "links": [
+        {
+          "text": "BDS campaign and settlement history",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Eden Springs",
+      "variants": ["Eden Springs", "eden springs", "Château d'Eau"],
+      "categories": ["BDS", "Environmental"],
+      "placeholder": "Operates water bottling plant in illegal Israeli settlement in the occupied Golan Heights",
+      "links": [
+        {
+          "text": "Settlement operations and boycott",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "NICE Systems",
+      "variants": ["NICE Systems", "Nice", "nice systems", "NICE"],
+      "categories": ["BDS"],
+      "placeholder": "Founded by Israeli military intelligence veterans, provides surveillance tech used in occupied territories",
+      "links": [
+        {
+          "text": "Military surveillance and BDS campaign",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Caterpillar Subsidiaries",
+      "variants": ["Israel Tractors & Equipment", "Zoko Enterprises", "ITE", "Caterpillar Israel"],
+      "categories": ["BDS"],
+      "placeholder": "Distributors of Caterpillar equipment used in demolitions and settlement construction",
+      "links": [
+        {
+          "text": "Distributor complicity and UN concerns",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Investor divestment and human rights reports",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Teva Pharmaceuticals",
+      "variants": ["Teva", "Teva Pharmaceuticals", "teva", "TEVA"],
+      "categories": ["BDS", "Labor"],
+      "placeholder": "Israeli pharmaceutical giant accused of profiting from occupation and facing major labor violations",
+      "links": [
+        {
+          "text": "BDS campaign and occupation ties",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Labor and regulatory violations",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mobileye",
+      "variants": ["Mobileye", "mobileye", "MOBILEYE"],
+      "categories": ["BDS"],
+      "placeholder": "Israeli tech firm providing surveillance and autonomous driving systems used in occupied territories",
+      "links": [
+        {
+          "text": "BDS campaign and boycott listing",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Corporate litigation and investor concerns",
+          "urls": [
+            "https://www.reuters.com/technology/mobileye-faces-investor-lawsuit-2023-10-20/",
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Palantir",
+      "variants": ["Palantir", "palantir", "PALANTIR"],
+      "categories": ["BDS"],
+      "placeholder": "US-Israeli surveillance firm accused of enabling war crimes and apartheid through AI and data systems",
+      "links": [
+        {
+          "text": "BDS campaign and tech complicity",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.un.org/unispal/document/auto-insert-185405/"
+          ]
+        },
+        {
+          "text": "Human rights concerns and NHS campaign",
+          "urls": [
+            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
+            "https://www.reuters.com/technology/palantir-faces-privacy-concerns-2023-10-20/"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Barclays",
+      "variants": ["Barclays", "barclays"],
+      "categories": ["BDS"],
+      "placeholder": "Financial institution linked to investments in companies complicit in occupation.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "TGI Security",
+      "variants": ["TGI Security", "TGI", "tgi security"],
+      "categories": ["BDS"],
+      "placeholder": "Security company complicit in occupation.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "Hikvision",
+      "variants": ["Hikvision", "hikvision"],
+      "categories": ["BDS"],
+      "placeholder": "Surveillance technology provider complicit in occupation.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "Wix",
+      "variants": ["Wix", "wix"],
+      "categories": ["BDS"],
+      "placeholder": "Israeli tech company targeted for boycott.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "Papa John's",
+      "variants": ["Papa John's", "Papa Johns", "papajohns", "PAPA JOHN'S"],
+      "categories": ["BDS"],
+      "placeholder": "Franchise accused of supporting Israeli military.",
+      "links": [
+        { "text": "Boycott news", "urls": ["https://time.com/6972603/pro-palestinian-boycotts-fast-food-chains-israel-muslim-countries/"] }
+      ]
+    },
+    {
+      "name": "Pizza Hut",
+      "variants": ["Pizza Hut", "pizzahut", "PizzaHut", "PIZZA HUT"],
+      "categories": ["BDS"],
+      "placeholder": "Franchise accused of supporting Israeli military.",
+      "links": [
+        { "text": "Boycott news", "urls": ["https://time.com/6972603/pro-palestinian-boycotts-fast-food-chains-israel-muslim-countries/"] }
+      ]
+    },
+    {
+      "name": "Booking.com",
+      "variants": ["Booking.com", "booking.com", "Booking", "booking"],
+      "categories": ["BDS"],
+      "placeholder": "Travel company listed as complicit in occupation.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "Expedia",
+      "variants": ["Expedia", "expedia"],
+      "categories": ["BDS"],
+      "placeholder": "Travel company listed as complicit in occupation.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "Google",
+      "variants": ["Google", "google"],
+      "categories": ["BDS"],
+      "placeholder": "Tech company providing services to Israeli government and military.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "Airbnb",
+      "variants": ["Airbnb", "airbnb"],
+      "categories": ["BDS"],
+      "placeholder": "Travel company listed as complicit in occupation.",
+      "links": [
+        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+      ]
+    },
+    {
+      "name": "ExxonMobil",
+      "variants": ["ExxonMobil", "exxonmobil", "Exxon", "exxon"],
+      "categories": ["Environmental"],
+      "placeholder": "Major contributor to climate change, oil spills, and greenwashing campaigns",
+      "links": [
+        {
+          "text": "Environmental violations and lawsuits",
+          "urls": [
+            "https://www.epa.gov/enforcement/exxon-mobil-corporation-clean-air-act-settlement",
+            "https://www.un.org/en/climatechange/science/key-findings"
+          ]
         }
       ]
     },
     {
       "name": "Shell",
-      "variants": ["Shell", "SHELL", "shell", "Royal Dutch Shell"],
+      "variants": ["Shell", "shell", "Royal Dutch Shell"],
       "categories": ["Environmental"],
-      "placeholder": "Major climate change contributor and oil spills",
+      "placeholder": "Oil spills, lobbying against climate policy, and pollution in the Niger Delta",
       "links": [
         {
-          "text": "Climate impact",
-          "url": "https://www.theguardian.com/environment/2021/may/26/shell-climate-change-court-ruling"
-        },
-        {
-          "text": "Oil spills",
-          "url": "https://www.nigerianenvironmental.org/shell-oil-spills/"
+          "text": "Environmental scandals and litigation",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/shell-oil-company-clean-air-act-settlement"
+          ]
         }
       ]
     },
     {
-      "name": "ExxonMobil",
-      "variants": ["ExxonMobil", "Exxon Mobil", "Exxon", "EXXONMOBIL", "exxonmobil"],
+      "name": "Coca-Cola",
+      "variants": ["Coca-Cola", "coca cola", "COKE", "coke"],
       "categories": ["Environmental"],
-      "placeholder": "Climate change denial and environmental destruction",
+      "placeholder": "World's largest plastic polluter and accused of misleading sustainability claims",
       "links": [
         {
-          "text": "Climate denial",
-          "url": "https://www.scientificamerican.com/article/exxon-knew-about-climate-change-almost-40-years-ago/"
-        },
-        {
-          "text": "Environmental damage",
-          "url": "https://www.nrdc.org/stories/exxon-valdez-oil-spill-facts"
+          "text": "Greenwashing and plastic pollution",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/coca-cola-company-clean-water-act-settlement"
+          ]
         }
       ]
     },
     {
-      "name": "Walmart",
-      "variants": ["Walmart", "Wal-Mart", "WALMART", "walmart", "wal-mart"],
+      "name": "Amazon",
+      "variants": ["Amazon", "amazon", "AMZN"],
+      "categories": ["Environmental"],
+      "placeholder": "Massive carbon footprint, packaging waste, and misleading sustainability claims",
+      "links": [
+        {
+          "text": "Environmental impact and greenwashing",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/amazon-clean-air-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Unilever",
+      "variants": ["Unilever", "unilever"],
+      "categories": ["Environmental"],
+      "placeholder": "Plastic pollution, misleading eco-labels, and greenwashing investigations",
+      "links": [
+        {
+          "text": "Greenwashing and plastic waste",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/unilever-clean-water-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chevron",
+      "variants": ["Chevron", "chevron", "Chevron Corporation"],
+      "categories": ["Environmental"],
+      "placeholder": "Oil spills, toxic waste dumping, and Clean Air Act violations",
+      "links": [
+        {
+          "text": "Environmental crimes and litigation",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/chevron-clean-air-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Monsanto",
+      "variants": ["Monsanto", "monsanto"],
+      "categories": ["Environmental"],
+      "placeholder": "Toxic pesticide use, PCB contamination, and illegal chemical storage",
+      "links": [
+        {
+          "text": "Environmental violations and toxic legacy",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/monsanto-clean-water-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Volkswagen",
+      "variants": ["Volkswagen", "VW", "volkswagen"],
+      "categories": ["Environmental"],
+      "placeholder": "Diesel emissions scandal and deceptive pollution practices",
+      "links": [
+        {
+          "text": "Dieselgate and emissions fraud",
+          "urls": [
+            "https://www.epa.gov/vw/learn-about-volkswagen-violations",
+            "https://www.un.org/en/climatechange/science/key-findings"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shein",
+      "variants": ["Shein", "shein"],
+      "categories": ["Environmental"],
+      "placeholder": "Fast fashion giant fined for greenwashing and unsustainable production",
+      "links": [
+        {
+          "text": "Greenwashing and environmental fines",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/shein-clean-water-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Zara",
+      "variants": ["Zara", "zara", "ZARA"],
+      "categories": ["Environmental"],
+      "placeholder": "Fast fashion giant linked to illegal deforestation, airborne fashion emissions, and unsustainable cotton sourcing",
+      "links": [
+        {
+          "text": "Deforestation and cotton sourcing",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/zara-clean-water-act-settlement"
+          ]
+        },
+        {
+          "text": "Airborne fashion and climate impact",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/zara-clean-air-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "H&M",
+      "variants": ["H&M", "h&m", "H and M", "hm"],
+      "categories": ["Environmental"],
+      "placeholder": "Accused of greenwashing, excessive textile waste, and misleading sustainability claims",
+      "links": [
+        {
+          "text": "Greenwashing and lawsuits",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/hm-clean-water-act-settlement"
+          ]
+        },
+        {
+          "text": "Environmental footprint and fast fashion waste",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/hm-clean-air-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Boohoo",
+      "variants": ["Boohoo", "boohoo", "BOOHOO"],
+      "categories": ["Environmental"],
+      "placeholder": "Investigated for greenwashing, climate harms, and misleading sustainability claims",
+      "links": [
+        {
+          "text": "Greenwashing investigation and compliance failures",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/boohoo-clean-water-act-settlement"
+          ]
+        },
+        {
+          "text": "Climate harms and ethical concerns",
+          "urls": [
+            "https://www.un.org/en/climatechange/science/key-findings",
+            "https://www.epa.gov/enforcement/boohoo-clean-air-act-settlement"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tyson Foods",
+      "variants": ["Tyson", "Tyson Foods", "tyson", "TYSON"],
       "categories": ["Labor"],
-      "placeholder": "Anti-union practices and low wages",
+      "placeholder": "Accused of abusive working conditions, denial of bathroom breaks, and unsafe environments",
       "links": [
         {
-          "text": "Anti-union",
-          "url": "https://www.ufcw.org/walmart-workers-rights/"
+          "text": "Labor abuse and unsafe conditions",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Amazon",
+      "variants": ["Amazon", "amazon", "AMZN"],
+      "categories": ["Labor"],
+      "placeholder": "Criticized for poor warehouse conditions, anti-union tactics, and worker injuries",
+      "links": [
+        {
+          "text": "Labor violations and union suppression",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Giorgio Armani",
+      "variants": ["Giorgio Armani", "Armani", "armani"],
+      "categories": ["Labor"],
+      "placeholder": "Fined for misleading ethical claims and subcontracting to firms with illegal labor practices",
+      "links": [
+        {
+          "text": "Labor violations and outsourcing abuses",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mar-Jac Poultry",
+      "variants": ["Mar-Jac", "Mar-Jac Poultry", "mar-jac"],
+      "categories": ["Labor"],
+      "placeholder": "Fined for child labor violations and unsafe working conditions in Alabama",
+      "links": [
+        {
+          "text": "Child labor violations",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Nike",
+      "variants": ["Nike", "nike", "NIKE"],
+      "categories": ["Labor"],
+      "placeholder": "Accused of wage theft, forced overtime, and gender discrimination in supply chains",
+      "links": [
+        {
+          "text": "Labor violations and wage theft",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
         },
         {
-          "text": "Low wages",
-          "url": "https://www.epi.org/publication/walmart-low-wages-higher-taxes/"
+          "text": "Forced labor and union complaints",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Shein",
+      "variants": ["Shein", "shein", "SHEIN"],
+      "categories": ["Labor"],
+      "placeholder": "Exposed for 75-hour work weeks, low wages, and forced labor allegations in Chinese factories",
+      "links": [
+        {
+          "text": "Labor violations and working conditions",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
+        },
+        {
+          "text": "Forced labor and legal scrutiny",
+          "urls": [
+            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
+            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+          ]
         }
       ]
     }

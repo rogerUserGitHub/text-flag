@@ -116,6 +116,10 @@ To add new brands, simply edit this file and rebuild the extension.
 4. Test the extension thoroughly
 5. Submit a pull request
 
+## Disclaimer
+
+ClearLabel is a tool for informational purposes only. It highlights brands based on publicly available data related to ethical concerns, such as environmental practices, labor conditions, and political controversies. The extension does not make legal claims or definitive judgments about any company. Users should independently verify any information before making decisions. The developer is not liable for any actions taken based on the extension’s content.
+
 ## License
 
 MIT License - see LICENSE file for details.
