@@ -174,7 +174,15 @@
                 });
               }
 
-              return `<span class="brand-flagged" data-tooltip="${tooltip}">${match}</span>`;
+              // Escape HTML entities in the tooltip to prevent HTML injection
+              const escapedTooltip = tooltip
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;');
+
+              return `<span class="brand-flagged" data-tooltip="${escapedTooltip}">${match}</span>`;
             });
           }
         });
