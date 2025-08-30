@@ -121,9 +121,7 @@ const ExtensionPopup: React.FC = () => {
         const response = await chrome.tabs.sendMessage(activeTab.id, {
           type: 'get_detected_brands',
         });
-        console.log('Popup received response:', response);
         if (response && response.brands) {
-          console.log('Setting detected brands:', response.brands);
           setDetectedBrands(response.brands);
         }
       }
@@ -238,7 +236,6 @@ const ExtensionPopup: React.FC = () => {
     const filtered = detectedBrands.filter((brand) =>
       brand.categories.some((cat) => enabledCategories.includes(cat))
     );
-    console.log('Filtered detected brands:', filtered);
     return filtered;
   };
 
