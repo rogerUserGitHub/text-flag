@@ -174,7 +174,7 @@
                 });
               }
 
-              return `<span class="brand-flagged" data-tooltip="${tooltip}" title="${tooltip}">${match}</span>`;
+              return `<span class="brand-flagged" data-tooltip="${tooltip}">${match}</span>`;
             });
           }
         });
@@ -247,7 +247,6 @@
         break;
 
       case 'get_detected_brands':
-        console.log('Content script sending detected brands:', detectedBrands);
         sendResponse({ brands: detectedBrands });
         break;
 
