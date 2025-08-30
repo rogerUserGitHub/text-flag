@@ -16,22 +16,98 @@
   "brands": [
     {
       "name": "Nestlé",
-      "variants": ["Nestlé", "Nestle", "NESTLE", "nestlé", "nestle"],
+      "variants": [
+        "Nestlé",
+        "Nestle",
+        "NESTLE",
+        "nestlé",
+        "nestle",
+        "Nespresso",
+        "nespresso",
+        "Nescafé",
+        "Nescafe",
+        "nescafé",
+        "nescafe",
+        "KitKat",
+        "kitkat",
+        "Smarties",
+        "smarties",
+        "Aero",
+        "aero",
+        "Milkybar",
+        "milkybar",
+        "Quality Street",
+        "quality street",
+        "After Eight",
+        "after eight",
+        "Perrier",
+        "perrier",
+        "San Pellegrino",
+        "SanPellegrino",
+        "san pellegrino",
+        "sanpellegrino",
+        "Poland Spring",
+        "poland spring",
+        "Vittel",
+        "vittel",
+        "Pure Life",
+        "pure life",
+        "Maggi",
+        "maggi",
+        "Stouffer's",
+        "Stouffers",
+        "stouffers",
+        "Lean Cuisine",
+        "lean cuisine",
+        "Hot Pockets",
+        "hot pockets",
+        "Toll House",
+        "toll house",
+        "Carnation",
+        "carnation",
+        "Coffee-Mate",
+        "Coffee Mate",
+        "coffee-mate",
+        "coffee mate",
+        "Gerber",
+        "gerber",
+        "Cerelac",
+        "cerelac",
+        "Nan",
+        "NAN",
+        "nan",
+        "Purina",
+        "purina",
+        "Friskies",
+        "friskies",
+        "Fancy Feast",
+        "fancy feast",
+        "Beneful",
+        "beneful",
+        "Felix",
+        "felix"
+      ],
       "categories": ["BDS", "Environmental"],
-      "placeholder": "Major water privatization and BDS violations in occupied territories",
+      "placeholder": "Major plastic pollution, water privatization, greenwashing, and BDS violations in occupied territories",
       "links": [
         {
-          "text": "Water privatization",
+          "text": "Nestlé plastic pollution case study",
+          "urls": ["https://talking-trash.com/case-study/nestle/"]
+        },
+        {
+          "text": "Nestlé water privatization in Ontario",
           "urls": [
-            "https://www.un.org/waterforlifedecade/water_corporations.shtml",
-            "https://www.ohchr.org/en/press-releases/2022/07/water-should-be-treated-as-human-right-not-commodity-un-expert"
+            "https://www.theguardian.com/global/2018/oct/04/ontario-six-nations-nestle-running-water"
           ]
         },
         {
-          "text": "BDS violations",
+          "text": "Nestlé greenwashing investigation",
+          "urls": ["https://www.bbc.com/news/business-67343893"]
+        },
+        {
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -43,16 +119,9 @@
       "placeholder": "Provides surveillance and biometric tech to Israeli military and prisons",
       "links": [
         {
-          "text": "BDS violations",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Surveillance in occupied territories",
-          "urls": [
-            "https://www.ohchr.org/en/statements/2022/08/israels-surveillance-palestinians-human-rights-concerns-un-experts"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -64,10 +133,9 @@
       "placeholder": "Sponsors Israeli football teams in illegal settlements",
       "links": [
         {
-          "text": "BDS campaign",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -79,10 +147,9 @@
       "placeholder": "Invests in arms companies supplying weapons to Israel",
       "links": [
         {
-          "text": "BDS violations",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -94,10 +161,9 @@
       "placeholder": "Builds railways connecting illegal Israeli settlements",
       "links": [
         {
-          "text": "Settlement infrastructure",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -106,13 +172,12 @@
       "name": "Chevron",
       "variants": ["Chevron", "chevron", "Chevron Corporation"],
       "categories": ["BDS", "Environmental"],
-      "placeholder": "Operates gas fields off Gaza coast and supports Israeli energy sector",
+      "placeholder": "Operates gas fields off Gaza coast, supports Israeli energy sector, and has environmental violations including oil spills and Clean Air Act violations",
       "links": [
         {
-          "text": "Gas operations in Israel",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.reuters.com/business/energy/chevron-expands-israel-gas-operations-2022-06-29/",
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -124,10 +189,9 @@
       "placeholder": "Linked to operations in Israeli settlements",
       "links": [
         {
-          "text": "Settlement commerce",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -135,15 +199,13 @@
     {
       "name": "Starbucks",
       "variants": ["Starbucks", "starbucks", "STARBUCKS"],
-      "categories": ["BDS", "Labor"],
-      "placeholder": "Sued union over pro-Palestinian messaging and accused of supporting Israeli military",
+      "categories": ["BDS"],
+      "placeholder": "Linked to operations in Israeli settlements",
       "links": [
         {
-          "text": "Union suppression and boycott",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.reuters.com/legal/starbucks-workers-union-sues-company-over-pro-palestinian-social-media-2023-11-03/",
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.nlrb.gov/case/20-CA-301119"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -155,11 +217,9 @@
       "placeholder": "Franchise support for Israeli military and legal action against BDS activists",
       "links": [
         {
-          "text": "Franchise donations and boycott",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://time.com/6694986/israel-palestine-bds-boycotts-starbucks-mcdonalds/",
-            "https://www.reuters.com/world/middle-east/mcdonalds-franchise-owner-israel-donates-meals-military-2023-10-16/",
-            "https://www.dol.gov/newsroom/releases/whd/whd20230720"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -171,16 +231,9 @@
       "placeholder": "Israel's largest arms manufacturer, complicit in war crimes and surveillance",
       "links": [
         {
-          "text": "Military complicity",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Activist pressure",
-          "urls": [
-            "https://www.reuters.com/world/middle-east/protesters-target-israeli-arms-maker-elbit-systems-2023-10-20/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -192,16 +245,9 @@
       "placeholder": "Bulldozers used in demolitions, settlement infrastructure, and military operations",
       "links": [
         {
-          "text": "Demolition equipment",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Human rights concerns",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -213,14 +259,7 @@
       "placeholder": "Heavy machinery used in demolitions and settlement construction in occupied territories",
       "links": [
         {
-          "text": "UN listing and demolition use",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "OECD complaint and human rights violations",
+          "text": "UN expert calls for end to Israeli occupation",
           "urls": [
             "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
             "https://www.un.org/unispal/document/auto-insert-185405/"
@@ -235,16 +274,9 @@
       "placeholder": "Involved in infrastructure projects crossing into occupied territories and environmental controversies",
       "links": [
         {
-          "text": "Rail and energy projects in settlements",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "BDS campaign and complicity",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -256,37 +288,28 @@
       "placeholder": "Franchise accused of donating meals to Israeli military during Gaza operations",
       "links": [
         {
-          "text": "Franchise support for IDF",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://time.com/6694986/israel-palestine-bds-boycotts-starbucks-mcdonalds/",
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
-          ]
-        },
-        {
-          "text": "Global boycott response",
-          "urls": [
-            "https://time.com/6694986/israel-palestine-bds-boycotts-starbucks-mcdonalds/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
     },
     {
       "name": "Hyundai",
-      "variants": ["Hyundai", "hyundai", "Hyundai Heavy Industries", "Hyundai Motor Group"],
+      "variants": [
+        "Hyundai",
+        "hyundai",
+        "Hyundai Heavy Industries",
+        "Hyundai Motor Group"
+      ],
       "categories": ["BDS"],
       "placeholder": "Construction equipment used in home demolitions and settlement expansion",
       "links": [
         {
-          "text": "BDS campaign and demolition use",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Boycott listing and brand impact",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -298,16 +321,9 @@
       "placeholder": "Franchise accused of supporting Israeli troops and facing regional boycotts",
       "links": [
         {
-          "text": "Franchise support and boycott impact",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://time.com/6972603/pro-palestinian-boycotts-fast-food-chains-israel-muslim-countries/",
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
-          ]
-        },
-        {
-          "text": "BDS campaign listing",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -319,81 +335,9 @@
       "placeholder": "Donated to Israeli organizations during Gaza conflict, sparking global boycott",
       "links": [
         {
-          "text": "Donations and boycott response",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.reuters.com/world/middle-east/disney-donates-israel-humanitarian-aid-2023-10-16/",
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
-          ]
-        },
-        {
-          "text": "Gen Z and BDS boycott campaign",
-          "urls": [
-            "https://www.reuters.com/world/middle-east/young-people-lead-boycott-campaigns-against-israel-2023-10-20/"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Unilever",
-      "variants": ["Unilever", "unilever"],
-      "categories": ["BDS"],
-      "placeholder": "Parent company of Ben & Jerry's, accused of undermining boycott of Israeli settlements",
-      "links": [
-        {
-          "text": "BDS campaign and settlement ties",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Legal dispute over Ben & Jerry's boycott",
-          "urls": [
-            "https://www.reuters.com/legal/unilever-sells-ben-jerrys-israel-business-2022-07-05/",
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Danone",
-      "variants": ["Danone", "danone"],
-      "categories": ["Environmental", "Labor"],
-      "placeholder": "Sued for failing to comply with France's duty of vigilance law over plastic pollution and labor violations",
-      "links": [
-        {
-          "text": "Environmental violations and plastics lawsuit",
-          "urls": [
-            "https://www.reuters.com/sustainability/danone-faces-lawsuit-over-plastic-pollution-2023-01-17/",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-plastic-pollution"
-          ]
-        },
-        {
-          "text": "Labor and safety violations",
-          "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Re/Max",
-      "variants": ["Re/Max", "RE/MAX", "remax", "Remax"],
-      "categories": ["BDS"],
-      "placeholder": "Real estate company involved in selling properties in illegal Israeli settlements",
-      "links": [
-        {
-          "text": "BDS campaign and settlement sales",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Pressure from religious groups",
-          "urls": [
-            "https://www.reuters.com/world/middle-east/religious-groups-pressure-companies-israel-2023-10-20/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -405,10 +349,9 @@
       "placeholder": "Cosmetics company operating in illegal Israeli settlements and exploiting Dead Sea resources",
       "links": [
         {
-          "text": "Settlement operations and boycott",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -417,20 +360,12 @@
       "name": "Volvo",
       "variants": ["Volvo", "volvo", "Volvo Group", "Volvo Trucks"],
       "categories": ["BDS", "Environmental", "Labor"],
-      "placeholder": "Supplies equipment used in demolitions and owns stake in prisoner transport firm",
+      "placeholder": "Supplies equipment used in demolitions, owns stake in prisoner transport firm, and has environmental and labor violations",
       "links": [
         {
-          "text": "BDS campaign and settlement complicity",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Environmental and labor violations",
-          "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -442,10 +377,9 @@
       "placeholder": "Operated in illegal settlements and continues to face boycott for labor abuses and displacement of Bedouins",
       "links": [
         {
-          "text": "BDS campaign and settlement history",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -453,14 +387,13 @@
     {
       "name": "Eden Springs",
       "variants": ["Eden Springs", "eden springs", "Château d'Eau"],
-      "categories": ["BDS", "Environmental"],
+      "categories": ["BDS"],
       "placeholder": "Operates water bottling plant in illegal Israeli settlement in the occupied Golan Heights",
       "links": [
         {
-          "text": "Settlement operations and boycott",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -472,32 +405,28 @@
       "placeholder": "Founded by Israeli military intelligence veterans, provides surveillance tech used in occupied territories",
       "links": [
         {
-          "text": "Military surveillance and BDS campaign",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
     },
     {
       "name": "Caterpillar Subsidiaries",
-      "variants": ["Israel Tractors & Equipment", "Zoko Enterprises", "ITE", "Caterpillar Israel"],
+      "variants": [
+        "Israel Tractors & Equipment",
+        "Zoko Enterprises",
+        "ITE",
+        "Caterpillar Israel"
+      ],
       "categories": ["BDS"],
       "placeholder": "Distributors of Caterpillar equipment used in demolitions and settlement construction",
       "links": [
         {
-          "text": "Distributor complicity and UN concerns",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Investor divestment and human rights reports",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -505,21 +434,13 @@
     {
       "name": "Teva Pharmaceuticals",
       "variants": ["Teva", "Teva Pharmaceuticals", "teva", "TEVA"],
-      "categories": ["BDS", "Labor"],
+      "categories": ["BDS"],
       "placeholder": "Israeli pharmaceutical giant accused of profiting from occupation and facing major labor violations",
       "links": [
         {
-          "text": "BDS campaign and occupation ties",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Labor and regulatory violations",
-          "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -531,17 +452,9 @@
       "placeholder": "Israeli tech firm providing surveillance and autonomous driving systems used in occupied territories",
       "links": [
         {
-          "text": "BDS campaign and boycott listing",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Corporate litigation and investor concerns",
-          "urls": [
-            "https://www.reuters.com/technology/mobileye-faces-investor-lawsuit-2023-10-20/",
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -553,17 +466,9 @@
       "placeholder": "US-Israeli surveillance firm accused of enabling war crimes and apartheid through AI and data systems",
       "links": [
         {
-          "text": "BDS campaign and tech complicity",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.un.org/unispal/document/auto-insert-185405/"
-          ]
-        },
-        {
-          "text": "Human rights concerns and NHS campaign",
-          "urls": [
-            "https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory",
-            "https://www.reuters.com/technology/palantir-faces-privacy-concerns-2023-10-20/"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]
@@ -572,90 +477,154 @@
       "name": "Barclays",
       "variants": ["Barclays", "barclays"],
       "categories": ["BDS"],
-      "placeholder": "Financial institution linked to investments in companies complicit in occupation.",
+      "placeholder": "Financial institution linked to investments in companies complicit in occupation",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "TGI Security",
       "variants": ["TGI Security", "TGI", "tgi security"],
       "categories": ["BDS"],
-      "placeholder": "Security company complicit in occupation.",
+      "placeholder": "Security company complicit in occupation",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Hikvision",
       "variants": ["Hikvision", "hikvision"],
       "categories": ["BDS"],
-      "placeholder": "Surveillance technology provider complicit in occupation.",
+      "placeholder": "Surveillance technology provider complicit in occupation",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Wix",
       "variants": ["Wix", "wix"],
       "categories": ["BDS"],
-      "placeholder": "Israeli tech company targeted for boycott.",
+      "placeholder": "Israeli tech company targeted for boycott",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Papa John's",
       "variants": ["Papa John's", "Papa Johns", "papajohns", "PAPA JOHN'S"],
       "categories": ["BDS"],
-      "placeholder": "Franchise accused of supporting Israeli military.",
+      "placeholder": "Franchise accused of supporting Israeli military",
       "links": [
-        { "text": "Boycott news", "urls": ["https://time.com/6972603/pro-palestinian-boycotts-fast-food-chains-israel-muslim-countries/"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Pizza Hut",
       "variants": ["Pizza Hut", "pizzahut", "PizzaHut", "PIZZA HUT"],
       "categories": ["BDS"],
-      "placeholder": "Franchise accused of supporting Israeli military.",
+      "placeholder": "Franchise accused of supporting Israeli military",
       "links": [
-        { "text": "Boycott news", "urls": ["https://time.com/6972603/pro-palestinian-boycotts-fast-food-chains-israel-muslim-countries/"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Booking.com",
       "variants": ["Booking.com", "booking.com", "Booking", "booking"],
       "categories": ["BDS"],
-      "placeholder": "Travel company listed as complicit in occupation.",
+      "placeholder": "Travel company listed as complicit in occupation",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Expedia",
       "variants": ["Expedia", "expedia"],
       "categories": ["BDS"],
-      "placeholder": "Travel company listed as complicit in occupation.",
+      "placeholder": "Travel company listed as complicit in occupation",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Google",
       "variants": ["Google", "google"],
       "categories": ["BDS"],
-      "placeholder": "Tech company providing services to Israeli government and military.",
+      "placeholder": "Tech company providing services to Israeli government and military",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Reebok",
+      "variants": ["Reebok", "reebok"],
+      "categories": ["BDS"],
+      "placeholder": "Supports Israeli occupation through sponsorship of Israeli athletes and teams",
+      "links": [
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
       "name": "Airbnb",
       "variants": ["Airbnb", "airbnb"],
       "categories": ["BDS"],
-      "placeholder": "Travel company listed as complicit in occupation.",
+      "placeholder": "Travel company listed as complicit in occupation",
       "links": [
-        { "text": "BDS campaign", "urls": ["https://www.ohchr.org/en/press-releases/2023/11/un-expert-calls-end-israeli-occupation-palestinian-territory"] }
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
       ]
     },
     {
@@ -665,10 +634,10 @@
       "placeholder": "Major contributor to climate change, oil spills, and greenwashing campaigns",
       "links": [
         {
-          "text": "Environmental violations and lawsuits",
+          "text": "World's most polluting companies ranking",
           "urls": [
-            "https://www.epa.gov/enforcement/exxon-mobil-corporation-clean-air-act-settlement",
-            "https://www.un.org/en/climatechange/science/key-findings"
+            "https://www.thecorporategovernanceinstitute.com/insights/news-analysis/the-20-most-polluting-companies-in-the-world-esg/?srsltid=AfmBOopEq-N55LeptGacJ7eLxVShSl-jrP89kB6C9GbpcxX19BrZbGmE",
+            "https://earth.org/36-fossil-fuel-giants-responsible-for-half-of-worlds-co2-emissions-report/"
           ]
         }
       ]
@@ -680,10 +649,10 @@
       "placeholder": "Oil spills, lobbying against climate policy, and pollution in the Niger Delta",
       "links": [
         {
-          "text": "Environmental scandals and litigation",
+          "text": "World's most polluting companies ranking",
           "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/shell-oil-company-clean-air-act-settlement"
+            "https://www.thecorporategovernanceinstitute.com/insights/news-analysis/the-20-most-polluting-companies-in-the-world-esg/?srsltid=AfmBOopEq-N55LeptGacJ7eLxVShSl-jrP89kB6C9GbpcxX19BrZbGmE",
+            "https://earth.org/36-fossil-fuel-giants-responsible-for-half-of-worlds-co2-emissions-report/"
           ]
         }
       ]
@@ -695,10 +664,21 @@
       "placeholder": "World's largest plastic polluter and accused of misleading sustainability claims",
       "links": [
         {
-          "text": "Greenwashing and plastic pollution",
+          "text": "Coca-Cola's role in plastic pollution",
           "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/coca-cola-company-clean-water-act-settlement"
+            "https://www.greenpeace.org/aotearoa/story/unbottling-the-truth-coca-colas-role-in-plastic-pollution/"
+          ]
+        },
+        {
+          "text": "Coca-Cola plastic waste in oceans",
+          "urls": [
+            "https://www.theguardian.com/business/2025/mar/27/coca-cola-plastic-waste-in-oceans-expected-to-reach-602m-kilograms-a-year-by-2030"
+          ]
+        },
+        {
+          "text": "2023 global brand audit results",
+          "urls": [
+            "https://www.breakfreefromplastic.org/2024/02/07/bffp-movement-unveils-2023-global-brand-audit-results/"
           ]
         }
       ]
@@ -707,28 +687,109 @@
       "name": "Amazon",
       "variants": ["Amazon", "amazon", "AMZN"],
       "categories": ["Environmental"],
-      "placeholder": "Massive carbon footprint, packaging waste, and misleading sustainability claims",
+      "placeholder": "Massive carbon footprint, packaging waste, plastic pollution",
       "links": [
         {
-          "text": "Environmental impact and greenwashing",
-          "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/amazon-clean-air-act-settlement"
-          ]
+          "text": "Amazon's plastic packaging report",
+          "urls": ["https://oceana.org/reports/amazon-report-2021/"]
         }
       ]
     },
     {
       "name": "Unilever",
-      "variants": ["Unilever", "unilever"],
-      "categories": ["Environmental"],
-      "placeholder": "Plastic pollution, misleading eco-labels, and greenwashing investigations",
+      "variants": [
+        "Unilever",
+        "unilever",
+        "UNILEVER",
+        "Dove",
+        "dove",
+        "DOVE",
+        "Lipton",
+        "lipton",
+        "LIPTON",
+        "Knorr",
+        "knorr",
+        "KNORR",
+        "Hellmann's",
+        "hellmanns",
+        "Hellmanns",
+        "HELLMANNS",
+        "Ben & Jerry's",
+        "ben & jerry's",
+        "Ben and Jerrys",
+        "ben and jerrys",
+        "BEN & JERRY'S",
+        "Magnum",
+        "magnum",
+        "MAGNUM",
+        "Axe",
+        "axe",
+        "AXE",
+        "Lynx",
+        "lynx",
+        "LYNX",
+        "Rexona",
+        "rexona",
+        "REXONA",
+        "Sure",
+        "SURE",
+        "sure",
+        "Walls",
+        "walls",
+        "WALLS",
+        "Breyers",
+        "breyers",
+        "BREYERS",
+        "Cif",
+        "cif",
+        "CIF",
+        "Jif",
+        "jif",
+        "JIF",
+        "Persil",
+        "persil",
+        "PERSIL",
+        "OMO",
+        "Omo",
+        "omo",
+        "Surf",
+        "surf",
+        "SURF",
+        "Vaseline",
+        "vaseline",
+        "VASELINE",
+        "Lifebuoy",
+        "lifebuoy",
+        "LIFEBUOY",
+        "Signal",
+        "signal",
+        "SIGNAL",
+        "Pepsodent",
+        "pepsodent",
+        "PEPSODENT",
+        "Comfort",
+        "comfort",
+        "COMFORT",
+        "Domestos",
+        "domestos",
+        "DOMESTOS",
+        "Seventh Generation",
+        "seventh generation",
+        "SEVENTH GENERATION"
+      ],
+      "categories": ["Environmental", "Labor"],
+      "placeholder": "Plastic pollution, misleading eco-labels, greenwashing investigations, and child labor in palm oil production",
       "links": [
         {
-          "text": "Greenwashing and plastic waste",
+          "text": "Unilever's complicity in plastics crisis",
           "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/unilever-clean-water-act-settlement"
+            "https://www.greenpeace.org.uk/resources/uncovered-unilevers-complicity-in-the-plastics-crisis-and-its-power-to-solve-it/"
+          ]
+        },
+        {
+          "text": "Child labor and forced labor in palm oil",
+          "urls": [
+            "https://www.amnesty.org/en/latest/news/2016/11/palm-oil-global-brands-profiting-from-child-and-forced-labour/"
           ]
         }
       ]
@@ -740,7 +801,7 @@
       "placeholder": "Oil spills, toxic waste dumping, and Clean Air Act violations",
       "links": [
         {
-          "text": "Environmental crimes and litigation",
+          "text": "Chevron Clean Air Act settlement",
           "urls": [
             "https://www.un.org/en/climatechange/science/key-findings",
             "https://www.epa.gov/enforcement/chevron-clean-air-act-settlement"
@@ -755,10 +816,10 @@
       "placeholder": "Toxic pesticide use, PCB contamination, and illegal chemical storage",
       "links": [
         {
-          "text": "Environmental violations and toxic legacy",
+          "text": "World's most polluting companies ranking",
           "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/monsanto-clean-water-act-settlement"
+            "https://www.thecorporategovernanceinstitute.com/insights/news-analysis/the-20-most-polluting-companies-in-the-world-esg/?srsltid=AfmBOopEq-N55LeptGacJ7eLxVShSl-jrP89kB6C9GbpcxX19BrZbGmE",
+            "https://earth.org/36-fossil-fuel-giants-responsible-for-half-of-worlds-co2-emissions-report/"
           ]
         }
       ]
@@ -770,11 +831,8 @@
       "placeholder": "Diesel emissions scandal and deceptive pollution practices",
       "links": [
         {
-          "text": "Dieselgate and emissions fraud",
-          "urls": [
-            "https://www.epa.gov/vw/learn-about-volkswagen-violations",
-            "https://www.un.org/en/climatechange/science/key-findings"
-          ]
+          "text": "Volkswagen emissions violations",
+          "urls": ["https://www.epa.gov/vw/learn-about-volkswagen-violations"]
         }
       ]
     },
@@ -782,13 +840,12 @@
       "name": "Shein",
       "variants": ["Shein", "shein"],
       "categories": ["Environmental"],
-      "placeholder": "Fast fashion giant fined for greenwashing and unsustainable production",
+      "placeholder": "Fast fashion, greenwashing and unsustainable production",
       "links": [
         {
-          "text": "Greenwashing and environmental fines",
+          "text": "Shein biggest polluter in fast fashion",
           "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/shein-clean-water-act-settlement"
+            "https://yaleclimateconnections.org/2024/09/shein-is-officially-the-biggest-polluter-in-fast-fashion-ai-is-making-things-worse/"
           ]
         }
       ]
@@ -797,21 +854,11 @@
       "name": "Zara",
       "variants": ["Zara", "zara", "ZARA"],
       "categories": ["Environmental"],
-      "placeholder": "Fast fashion giant linked to illegal deforestation, airborne fashion emissions, and unsustainable cotton sourcing",
+      "placeholder": "Fast fashion with unsustainable practices",
       "links": [
         {
-          "text": "Deforestation and cotton sourcing",
-          "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/zara-clean-water-act-settlement"
-          ]
-        },
-        {
-          "text": "Airborne fashion and climate impact",
-          "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/zara-clean-air-act-settlement"
-          ]
+          "text": "Zara can never be sustainable",
+          "urls": ["https://thefashionglobe.com/zara-can-never-be-sustainable/"]
         }
       ]
     },
@@ -822,99 +869,9 @@
       "placeholder": "Accused of greenwashing, excessive textile waste, and misleading sustainability claims",
       "links": [
         {
-          "text": "Greenwashing and lawsuits",
+          "text": "H&M pollution, waste and greenwashing",
           "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/hm-clean-water-act-settlement"
-          ]
-        },
-        {
-          "text": "Environmental footprint and fast fashion waste",
-          "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/hm-clean-air-act-settlement"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Boohoo",
-      "variants": ["Boohoo", "boohoo", "BOOHOO"],
-      "categories": ["Environmental"],
-      "placeholder": "Investigated for greenwashing, climate harms, and misleading sustainability claims",
-      "links": [
-        {
-          "text": "Greenwashing investigation and compliance failures",
-          "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/boohoo-clean-water-act-settlement"
-          ]
-        },
-        {
-          "text": "Climate harms and ethical concerns",
-          "urls": [
-            "https://www.un.org/en/climatechange/science/key-findings",
-            "https://www.epa.gov/enforcement/boohoo-clean-air-act-settlement"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Tyson Foods",
-      "variants": ["Tyson", "Tyson Foods", "tyson", "TYSON"],
-      "categories": ["Labor"],
-      "placeholder": "Accused of abusive working conditions, denial of bathroom breaks, and unsafe environments",
-      "links": [
-        {
-          "text": "Labor abuse and unsafe conditions",
-          "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Amazon",
-      "variants": ["Amazon", "amazon", "AMZN"],
-      "categories": ["Labor"],
-      "placeholder": "Criticized for poor warehouse conditions, anti-union tactics, and worker injuries",
-      "links": [
-        {
-          "text": "Labor violations and union suppression",
-          "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Giorgio Armani",
-      "variants": ["Giorgio Armani", "Armani", "armani"],
-      "categories": ["Labor"],
-      "placeholder": "Fined for misleading ethical claims and subcontracting to firms with illegal labor practices",
-      "links": [
-        {
-          "text": "Labor violations and outsourcing abuses",
-          "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Mar-Jac Poultry",
-      "variants": ["Mar-Jac", "Mar-Jac Poultry", "mar-jac"],
-      "categories": ["Labor"],
-      "placeholder": "Fined for child labor violations and unsafe working conditions in Alabama",
-      "links": [
-        {
-          "text": "Child labor violations",
-          "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+            "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4090874"
           ]
         }
       ]
@@ -922,43 +879,67 @@
     {
       "name": "Nike",
       "variants": ["Nike", "nike", "NIKE"],
-      "categories": ["Labor"],
-      "placeholder": "Accused of wage theft, forced overtime, and gender discrimination in supply chains",
+      "categories": ["Labor", "Environmental"],
+      "placeholder": "Environmental pollution, modern day slavery, labor violations in Cambodia, and forced labor in Xinjiang",
       "links": [
         {
-          "text": "Labor violations and wage theft",
+          "text": "Nike fashion waste and modern slavery",
           "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+            "https://www.greenpeace.org.uk/news/fashion-waste-from-nike-clarks-and-other-top-brands-suppliers-burnt-in-toxic-kilns-employing-modern-day-slaves-in-cambodia/"
           ]
         },
         {
-          "text": "Forced labor and union complaints",
+          "text": "Nike labor violations in Cambodia",
           "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+            "https://www.hrw.org/news/2023/07/20/nike-should-help-cambodian-workers-hurt-factory-closure"
+          ]
+        },
+        {
+          "text": "Nike forced labor in Xinjiang",
+          "urls": [
+            "https://www.business-humanrights.org/en/latest-news/china-83-major-brands-implicated-in-report-on-forced-labour-of-ethnic-minorities-from-xinjiang-assigned-to-factories-across-provinces-includes-company-responses/"
           ]
         }
       ]
     },
     {
-      "name": "Shein",
-      "variants": ["Shein", "shein", "SHEIN"],
-      "categories": ["Labor"],
-      "placeholder": "Exposed for 75-hour work weeks, low wages, and forced labor allegations in Chinese factories",
+      "name": "Microsoft",
+      "variants": ["Microsoft", "Xbox"],
+      "categories": ["BDS"],
+      "placeholder": "Recently added as a priority target; accused of supplying Azure cloud and AI services to Israeli military",
       "links": [
         {
-          "text": "Labor violations and working conditions",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
-        },
+        }
+      ]
+    },
+    {
+      "name": "Caltex",
+      "variants": ["Caltex"],
+      "categories": ["BDS"],
+      "placeholder": "Named alongside Chevron as BDS target for gas extraction in occupied areas",
+      "links": [
         {
-          "text": "Forced labor and legal scrutiny",
+          "text": "BDS movement boycott list",
           "urls": [
-            "https://www.ilo.org/global/topics/labour-standards/lang--en/index.htm",
-            "https://www.ohchr.org/en/press-releases/2023/01/un-expert-calls-end-labor-violations"
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Texaco",
+      "variants": ["Texaco"],
+      "categories": ["BDS"],
+      "placeholder": "Named alongside Chevron as BDS target for energy ties to occupation",
+      "links": [
+        {
+          "text": "BDS movement boycott list",
+          "urls": [
+            "https://www.bdsmovement.net/Act-Now-Against-These-Companies-Profiting-From-Genocide"
           ]
         }
       ]

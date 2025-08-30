@@ -18,11 +18,13 @@ A Chrome extension that helps users make informed decisions by identifying and f
 
 1. Clone this repository
 2. Install dependencies:
+
    ```bash
    npm install
    ```
 
 3. Build the extension:
+
    ```bash
    npm run build:extension
    ```
@@ -78,11 +80,13 @@ A Chrome extension that helps users make informed decisions by identifying and f
 To work on this project:
 
 1. Run the development server for the landing page:
+
    ```bash
    npm run dev
    ```
 
 2. For extension development, build and reload:
+
    ```bash
    npm run build:extension
    ```
@@ -95,13 +99,13 @@ The extension uses a local JSON file (`public/brandList.json`) containing brand 
 
 ```json
 [
-  { 
-    "name": "Nestlé", 
-    "categories": ["BDS", "Environmental"] 
+  {
+    "name": "Nestlé",
+    "categories": ["BDS", "Environmental"]
   },
-  { 
-    "name": "Amazon", 
-    "categories": ["Labor", "Environmental"] 
+  {
+    "name": "Amazon",
+    "categories": ["Labor", "Environmental"]
   }
 ]
 ```
@@ -118,7 +122,7 @@ To add new brands, simply edit this file and rebuild the extension.
 
 ## Disclaimer
 
-ClearLabel is a tool for informational purposes only. It highlights brands based on publicly available data related to ethical concerns, such as environmental practices, labor conditions, and political controversies. The extension does not make legal claims or definitive judgments about any company. Users should independently verify any information before making decisions. The developer is not liable for any actions taken based on the extension’s content.
+ClearLabel is a tool for informational purposes only. It highlights brands based on publicly available data related to ethical concerns, such as environmental practices, labor conditions, and controversies. The extension does not make legal claims or definitive judgments about any company. Users should independently verify any information before making decisions. The developer is not liable for any actions taken based on the extension’s content.
 
 ## License
 
